@@ -1,5 +1,6 @@
 import { useState } from "react";
 import lupaBusqueda from "./assets/lupaBusqueda.png";
+import './styles/appPeliculas.css'
 
 export const AppPeliculas = () => {
   const URL = "https://api.themoviedb.org/3/search/movie";
@@ -31,7 +32,7 @@ export const AppPeliculas = () => {
   };
 
   return (
-    <div className="container">
+    <div className="peliculas-container">
       <h1 className="title">Aplicación de Películas</h1>  
 
       <form onSubmit={handleSubmit} className="search-form">
