@@ -209,7 +209,7 @@ input[type="text"] {
   /* Lista de películas */
   .movie-list {
     margin: 0 auto;
-    width: 60%;
+    width: 65%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr auto;
   }

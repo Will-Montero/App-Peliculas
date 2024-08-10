@@ -44,7 +44,7 @@ export const AppPeliculas = () => {
    <>
     <div className="container">
       <header className="peliculas-header">
-      <h1 className="title">App of movies</h1>  
+      <h1 className="title">PelisFree</h1>  
       </header>
 
       <form onSubmit={handleSubmit} className="search-form">
