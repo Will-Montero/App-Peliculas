@@ -3,6 +3,7 @@ import lupaBusqueda from "./assets/lupaBusqueda.png";
 import './styles/appPeliculas.css'
 
 export const AppPeliculas = () => {
+
   const URL = "https://api.themoviedb.org/3/search/movie";
   const API_KEY = "9b99ed6f20e2bfc951d790cf5a420564";
 
@@ -32,13 +33,16 @@ export const AppPeliculas = () => {
   };
 
   return (
-    <div className="peliculas-container">
-      <h1 className="title">Aplicación de Películas</h1>  
+   <>
+    <div className="container">
+      <header className="peliculas-header">
+      <h1 className="title">App of movies</h1>  
+      </header>
 
       <form onSubmit={handleSubmit} className="search-form">
         <input
           type="text"
-          placeholder="Ingresa película"
+          placeholder="Enter movie"
           value={busqueda}
           onChange={handleOnChange}
           className="search-input"
@@ -57,10 +61,11 @@ export const AppPeliculas = () => {
               className="movie-poster"
             />
             <h2 className="movie-title">{pelicula.title}</h2>
-            <p className="movie-overview">{pelicula.overview}</p>
+            {/* <p className="movie-overview">{pelicula.overview}</p> */}
           </div>
         ))}
       </div>
     </div>
+   </>
   );
 };

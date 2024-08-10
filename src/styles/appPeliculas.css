@@ -1,198 +1,241 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #010e20;
+  color: #000000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
 
-  .peliculas-container {
-    width: 80%;
-    margin: 0px auto;
-    padding: 20px;
+.container {
+  width: 100%;
+  height: 5vh;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #fff;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Formulario de búsqueda */
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.search-input {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.search-button {
+  background-color: #007bff;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+/* Lista de películas */
+.movie-list {
+    margin: 0 auto;
+    width: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr  auto;
+    place-content: center;
+}
+
+.movie-card {
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(154, 146, 146, 0.1);
+  width: 60px;
+  transition: transform 0.2s;
+}
+
+.movie-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 0px 10px rgba(159, 73, 73, 0.1);
+
+}
+
+.movie-poster {
+  width: 100%;
+  height: 14vh;
+  border-radius: 10px;
+}
+
+.movie-title {
+  font-size: 18px;
+  margin: 10px 0 5px 0;
+  color: #333;
+}
+
+.movie-overview {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Media Queries */
+@media (min-width: 700px) {
+
+  .peliculas-header {
+    margin: 0 auto;
+    width: 40%;
   }
-  
+
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    place-content: center;
+  }
+
   h1 {
     font-size: 24px;
     margin-bottom: 20px;
     text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
   }
-  
+
   form {
     margin: 0 auto;
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
   }
-  
+
   input[type="text"] {
     width: 300px;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px/* Estilos generales */
-  }
-    .container {
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
-    
-    .title {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-    
-    /* Formulario de búsqueda */
-    .search-form {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 20px;
-      width: 100%;
-      max-width: 500px;
-    }
-    
-    .search-input {
-      width: 80%;
-      padding: 10px;
-      font-size: 16px;
-      border: 2px solid #ddd;
-      border-radius: 5px 0 0 5px;
-      outline: none;
-    }
-    
-    .search-button {
-      background-color:  #ddd;
-      border: 2px solid #ddd;
-      border: none;
-      border-radius: 0 5px 5px 0;
-      padding: 10px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-    }
-    
-    .search-icon {
-      width: 20px;
-      height: 20px;
-    }
-    
-    .search-button:hover {
-      background-color: #0056b3;
-    }
-    
-    /* Lista de películas */
-    .movie-list {
-      display: grid;
-      grid-template-columns: 1fr, 1fr, 1fr;
-      gap: 10px;
-
-    }
-    
-    .movie-card {
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-      margin: 10px;
-      padding: 10px;
-      width: 200px;
-      transition: transform 0.2s;
-      text-align: left;
-    }
-    
-    .movie-card:hover {
-      transform: scale(1.01);
-    }
-    
-    .movie-poster {
-      width: 100%;
-      border-radius: 10px;
-      object-fit: cover;
-    }
-    
-    .movie-title {
-      font-size: 18px;
-      margin: 10px 0 5px 0;
-      color: #333;
-    }
-    
-    .movie-overview {
-      font-size: 14px;
-      color: #777;
-    }
-    
-    /* Media Queries */
-    @media (min-width: 768px) {
-        .container {
-            width: 80%;
-            margin: 0px auto;
-            padding: 20px;
-            margin-left: 20px;
-          }
-      .search-form {
-        width: 80%;
-      }
-    
-      .movie-card {
-        width: 220px;
-      }
-    }
-    
-    @media (min-width: 1024px) {
-        .container {
-            width: 80%;
-            margin: 0px auto;
-            padding: 20px;
-            margin-left: 20px;
-          }
-      .search-form {
-        width: 60%;
-      }
-    
-      .movie-card {
-        width: 250px;
-      }
-    }
-    
-  
-  button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
     border-radius: 4px;
-    cursor: pointer;
   }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  .movie-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-  }
-  
-  .movie-card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .movie-card img {
-    width: 100%;
-    height: 35vh;
-    margin-bottom: 10px;
-  }
-  
-  .movie-card h2 {
-    font-size: 18px;
-    margin-bottom: 5px;
-  }
-  
-  .movie-card p {
-    margin-bottom: 5px;
-  }
-  
-  /* Estilos para móviles */
  
-  
-  
+
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  /* Formulario de búsqueda */
+  .search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .search-input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+  }
+
+  .search-button {
+    background-color: #e5eaf5;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  .search-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .search-button:hover {
+    background-color: #5f3636;
+  }
+
+  /* Lista de películas */
+  .movie-list {
+    margin: 0 auto;
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+  }
+
+  .movie-card {
+    background-color: #000000;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(180, 179, 179, 0.1);
+    width: 170px;
+    transition: transform 0.4s;
+    margin: 10px auto;
+   place-content: center;
+  }
+
+  .movie-card:hover {
+    transform: scale(1.03);
+    
+  }
+
+  .movie-poster {
+    height: 26vh;
+    place-content: center;
+  }
+
+  .movie-title {
+    font-size: 13px;
+    margin: 0px 2px 5px 10px;
+    color: #f4f0f0;
+   background-color: (232, 222, 222);
+   place-content: center;
+  }
+
+  .movie-overview {
+    font-size: 14px;
+    color: #777;
+  }
+}
+
