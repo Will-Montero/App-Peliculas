@@ -31,6 +31,14 @@ export const AppPeliculas = () => {
   const handleOnChange = (e) => {
     setBusqueda(e.target.value);
   };
+  
+  const limitarPalabras = (texto, maxPalabras) => {
+    const palabras = texto.split(" ");
+    if (palabras.length > maxPalabras) {
+      return palabras.slice(0, maxPalabras).join(" ") + "...";
+    }
+    return texto;
+  };
 
   return (
    <>
@@ -60,7 +68,7 @@ export const AppPeliculas = () => {
               alt={pelicula.title}
               className="movie-poster"
             />
-            <h2 className="movie-title">{pelicula.title}</h2>
+            <h2 className="movie-title">{limitarPalabras(pelicula.title, 5)}</h2>
             {/* <p className="movie-overview">{pelicula.overview}</p> */}
           </div>
         ))}
