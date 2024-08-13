@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import lupaBusqueda from "./assets/lupaBusqueda.png";
 import { Home } from "../Home";
 import './styles/appPeliculas.css'
@@ -10,10 +10,12 @@ export const AppPeliculas = () => {
 
   const [busqueda, setBusqueda] = useState("");
   const [dataPeliculas, setDataPeliculas] = useState({
-    data: [],
+    data: ([]),
     isLoading: true,
     errors: null
   });
+
+  const { data, isLoading, errors } = dataPeliculas
 
   const fetchPeliculas = async () => {
     try {
@@ -22,7 +24,7 @@ export const AppPeliculas = () => {
       );
       const data = await response.json();
       setDataPeliculas({
-        data,
+        data: data.results,
         isLoading: false,
         error: null
       });
@@ -54,6 +56,10 @@ export const AppPeliculas = () => {
     return texto;
   };
 
+  useEffect(() => {
+  fetchPeliculas()
+}, [])
+
   return (
    <>
       <Home></Home>
@@ -76,7 +82,7 @@ export const AppPeliculas = () => {
       </form>
 
       <div className="movie-list">
-        {dataPeliculas.map((pelicula) => (
+        {dataPeliculas.map(pelicula => (
           <div key={pelicula.id} className="movie-card">
             <img
               src={`https://image.tmdb.org/t/p/w500${pelicula.poster_path}`}
