@@ -60,13 +60,12 @@ export const AppPeliculas = () => {
           <div key={pelicula.id} className="movie-card">
             <div className="movie-info">
               <span className="movie-year">{pelicula.release_date.split("-")[0]}</span>
-              <span className="movie-title-overlay">{limitarPalabras(pelicula.title, 5)}</span>
             </div>
-            <img
+           { <img
               src={`https://image.tmdb.org/t/p/w500${pelicula.poster_path}`}
               alt={pelicula.title}
               className="movie-poster"
-            />
+            />}
             <div className="movie-details">
               <h2 className="movie-title">{pelicula.title}</h2>
               <p className="movie-year-details">{pelicula.release_date.split("-")[0]}</p>
