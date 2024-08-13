@@ -14,7 +14,7 @@ export const AppPeliculas = () => {
     errors: null
   });
 
-  const { isLoading, errors, data } = dataPeliculas
+  const { data, isLoading, errors } = dataPeliculas
 
   const fetchPeliculas = async () => {
     try {
@@ -79,7 +79,7 @@ export const AppPeliculas = () => {
       <div className="movie-list">
         { dataPeliculas ? <p>Cargando...</p>
                         : errors ? <p>ha ocurrido un errors... {errors}</p>
-                        : dataPeliculas.map((pelicula) => (
+                        : dataPeliculas.map(pelicula => (
           <div key={pelicula.id} className="movie-card">
             <img
               src={`https://image.tmdb.org/t/p/w500${pelicula.poster_path}`}
