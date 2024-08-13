@@ -3,6 +3,9 @@
   margin: 0 auto;
   color: white;
 }
+.peliculas-header{
+  
+}
 
 .movie-list {
   display: grid;
@@ -41,29 +44,35 @@
 }
 
 .movie-details {
-  margin: 10px 10px;
+  margin: 0;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
   width: 90%;
 }
 
 .movie-title {
+  margin: 15px 10px;
   font-size: 12px;
   margin-bottom: 3px;
 }
 
 .movie-year-details {
+  margin: 15px 10px;
   font-size: 9px;
   margin-bottom: 0px;
 }
 
 .movie-overview {
+  margin: 15px 10px;
   font-size: 10px;
   margin-bottom: 8px;
-  width: 80%;
+  width: 90%;
 }
 
-
+.movie-genre {
+  font-size: 12px;
+  color: #ccc;
+}
 
 /*para pantallas grandes*/
 @media (min-width: 700px) {

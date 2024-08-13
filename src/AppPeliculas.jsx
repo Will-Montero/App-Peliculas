@@ -82,7 +82,7 @@ export const AppPeliculas = () => {
                 {pelicula.release_date.split("-")[0]}
               </p>
               <p className="movie-overview">
-                {limitarPalabras(pelicula.overview, 25)}
+                {limitarPalabras(pelicula.overview, 27)}
               </p>
             </div>
           </div>
