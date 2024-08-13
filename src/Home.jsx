@@ -8,7 +8,7 @@ export const Home = () => {
         <div className="pelicula-card">
         <img src={laAbuela}
         loading='lazy' className="imagen-card"/>
-        <h3 className="titulo-card"></h3>
+        <h3 className="titulo-card">La abuela</h3>
         </div>
         <div className="pelicula-card">
         <img src={laAbuela}
