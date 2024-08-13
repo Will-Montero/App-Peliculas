@@ -70,7 +70,7 @@ export const AppPeliculas = () => {
               <h2 className="movie-title">{pelicula.title}</h2>
               <p className="movie-year-details">{pelicula.release_date.split("-")[0]}</p>
               <p className="movie-overview">{limitarPalabras(pelicula.overview, 25)}</p>
-              <p className="movie-genre">Género: {pelicula.genre_ids.join(", ")}</p>
+              {/* <p className="movie-genre">Género: {pelicula.genre_ids}</p> */}
             </div>
           </div>
         ))}

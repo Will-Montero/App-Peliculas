@@ -6,7 +6,7 @@
 
 .movie-list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr ;
   gap: 16px;
 }
 
@@ -65,4 +65,77 @@
 .movie-genre {
   font-size: 12px;
   color: #ccc;
+}
+
+/*para pantallas grandes*/
+@media(min-width: 700px){
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    color: white;
+  }
+  
+  .movie-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+  }
+  
+  .movie-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 30vh;
+  }
+  
+  .movie-info {
+    position: absolute;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    color: white;
+    align-items: flex-start;
+  }
+  
+  .movie-year {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2px 2px;
+    font-size: 10px;
+    border-radius: 3px;
+  
+  }
+  
+  .movie-poster {
+    width: 100%;
+    height: 10%;
+    object-fit: cover;
+  }
+  
+  .movie-details {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+  }
+  
+  .movie-title {
+    font-size: 12px;
+    margin-bottom: 3px;
+  }
+  
+  .movie-year-details {
+    font-size: 9px;
+    margin-bottom: 0px;
+  }
+  
+  .movie-overview {
+    font-size: 9px;
+    margin-bottom: 8px;
+  }
+  
+  .movie-genre {
+    font-size: 12px;
+    color: #ccc;
+  }
 }
