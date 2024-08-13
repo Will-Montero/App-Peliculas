@@ -1,0 +1,25 @@
+.container-home {
+    width: 90%;
+    background-color: black;
+    margin: 0 auto;
+    color: white;
+}
+
+.lista-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4px;
+    place-content: center;
+}
+.pelicula-card {
+    width: 30%;
+    height: 25vh;
+}
+.imagen-card {
+    width: 98%;
+    height: 20vh;
+}
+.titulo-card {
+    color: aliceblue;
+    font-size: 8px;
+}

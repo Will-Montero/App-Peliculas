@@ -1,6 +1,7 @@
 import { useState } from "react";
 import lupaBusqueda from "./assets/lupaBusqueda.png";
 import './styles/appPeliculas.css'
+import { Home } from "./Home";
 
 export const AppPeliculas = () => {
 
@@ -8,13 +9,7 @@ export const AppPeliculas = () => {
   const API_KEY = "9b99ed6f20e2bfc951d790cf5a420564";
 
   const [busqueda, setBusqueda] = useState("");
-  const [dataPeliculas, setDataPeliculas] = useState({
-    data: ([]),
-    isLoading: false,
-    errors: null
-  });
-
-  const { data, isLoading, errors } = dataPeliculas
+  const [dataPeliculas, setDataPeliculas] = useState([]);
 
   const fetchPeliculas = async () => {
     try {
@@ -22,18 +17,9 @@ export const AppPeliculas = () => {
         `${URL}?query=${busqueda}&api_key=${API_KEY}`
       );
       const data = await response.json();
-      setDataPeliculas({
-        data,
-        isLoading: false,
-        errors: null
-      });
+      setDataPeliculas(data.results);
       console.log(data);
     } catch (error) {
-      setDataPeliculas({
-        data: null,
-        isLoading: false,
-        errors: error
-      });
       console.error(" este es el error: ", error);
     }
   };
@@ -57,12 +43,10 @@ export const AppPeliculas = () => {
 
   return (
    <>
-      
     <div className="container">
       <header className="peliculas-header">
       <h1 className="title">PelisFree</h1>  
       </header>
-
       <form onSubmit={handleSubmit} className="search-form">
         <input
           type="text"
@@ -76,10 +60,10 @@ export const AppPeliculas = () => {
         </button>
       </form>
 
+      <Home></Home>
+
       <div className="movie-list">
-        { dataPeliculas ? <p>Cargando...</p>
-                        : errors ? <p>ha ocurrido un errors... {errors}</p>
-                        : dataPeliculas.map(pelicula => (
+        {dataPeliculas.map((pelicula) => (
           <div key={pelicula.id} className="movie-card">
             <img
               src={`https://image.tmdb.org/t/p/w500${pelicula.poster_path}`}
