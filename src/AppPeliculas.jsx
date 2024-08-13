@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import lupaBusqueda from "./assets/lupaBusqueda.png";
-import { Home } from "../Home";
 import './styles/appPeliculas.css'
 
 export const AppPeliculas = () => {
@@ -9,13 +8,7 @@ export const AppPeliculas = () => {
   const API_KEY = "9b99ed6f20e2bfc951d790cf5a420564";
 
   const [busqueda, setBusqueda] = useState("");
-  const [dataPeliculas, setDataPeliculas] = useState({
-    data: ([]),
-    isLoading: true,
-    errors: null
-  });
-
-  const { data, isLoading, errors } = dataPeliculas
+  const [dataPeliculas, setDataPeliculas] = useState([]);
 
   const fetchPeliculas = async () => {
     try {
@@ -23,18 +16,9 @@ export const AppPeliculas = () => {
         `${URL}?query=${busqueda}&api_key=${API_KEY}`
       );
       const data = await response.json();
-      setDataPeliculas({
-        data: data.results,
-        isLoading: false,
-        error: null
-      });
+      setDataPeliculas(data.results);
       console.log(data);
     } catch (error) {
-      setDataPeliculas({
-        data: null,
-        isLoading: false,
-        errors: error
-      })
       console.error(" este es el error: ", error);
     }
   };
@@ -56,13 +40,9 @@ export const AppPeliculas = () => {
     return texto;
   };
 
-  useEffect(() => {
-  fetchPeliculas()
-}, [])
-
   return (
    <>
-      <Home></Home>
+      
     <div className="container">
       <header className="peliculas-header">
       <h1 className="title">PelisFree</h1>  
@@ -82,7 +62,7 @@ export const AppPeliculas = () => {
       </form>
 
       <div className="movie-list">
-        {dataPeliculas.map(pelicula => (
+        {dataPeliculas.map((pelicula) => (
           <div key={pelicula.id} className="movie-card">
             <img
               src={`https://image.tmdb.org/t/p/w500${pelicula.poster_path}`}
