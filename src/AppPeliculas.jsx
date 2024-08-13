@@ -9,7 +9,11 @@ export const AppPeliculas = () => {
   const API_KEY = "9b99ed6f20e2bfc951d790cf5a420564";
 
   const [busqueda, setBusqueda] = useState("");
-  const [dataPeliculas, setDataPeliculas] = useState([]);
+  const [dataPeliculas, setDataPeliculas] = useState({
+    data: [],
+    isLoading: true,
+    errors: null
+  });
 
   const fetchPeliculas = async () => {
     try {
@@ -17,9 +21,18 @@ export const AppPeliculas = () => {
         `${URL}?query=${busqueda}&api_key=${API_KEY}`
       );
       const data = await response.json();
-      setDataPeliculas(data.results);
+      setDataPeliculas({
+        data,
+        isLoading: false,
+        error: null
+      });
       console.log(data);
     } catch (error) {
+      setDataPeliculas({
+        data: null,
+        isLoading: false,
+        errors: error
+      })
       console.error(" este es el error: ", error);
     }
   };
