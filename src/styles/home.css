@@ -62,11 +62,6 @@
   object-fit: cover;
 }
 
-.titulo-card {
-  margin: 0;
-  color: white;
-  width: 100%;
-}
 
 .titulo-card {
   margin: 5px 7px;
@@ -103,7 +98,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 15px 5px;
     width: 55%;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: black;
   }
 
   .pelicula-card {
@@ -113,6 +108,7 @@
     border-radius: 10px;
     height: 30vh;
     width: 10vw;
+    box-shadow: 0 0 10px rgba(39, 39, 39, 0.774);
   }
 
   .imagen-card {

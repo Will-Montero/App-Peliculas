@@ -50,7 +50,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 5px;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgb(10, 10, 10);
 }
 
 .movie-card {
@@ -69,6 +69,7 @@
 .movie-info {
   position: absolute;
   padding: 1px 3px;
+  font-size: px;
 }
 
 .movie-details {
@@ -144,7 +145,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 10px 5px;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: black;
 
   }
 
@@ -155,7 +156,7 @@
     border-radius: 10px;
     height: 30vh;
     width: 10vw;
-  box-shadow: 0 0 0.5px wheat;
+  box-shadow: 0 0 0.5px ;
   }
 
   .movie-poster {
