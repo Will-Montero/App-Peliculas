@@ -14,15 +14,26 @@ export const AppPeliculas = () => {
     errors: null
   });
 
+  const { isLoading, errors, data } = dataPeliculas
+
   const fetchPeliculas = async () => {
     try {
       const response = await fetch(
         `${URL}?query=${busqueda}&api_key=${API_KEY}`
       );
       const data = await response.json();
-      setDataPeliculas(data.results);
+      setDataPeliculas({
+        data: data.results,
+        isLoading: false,
+        errors: null
+      });
       console.log(data);
     } catch (error) {
+      setDataPeliculas({
+        data: null,
+        isLoading: false,
+        errors: error
+      });
       console.error(" este es el error: ", error);
     }
   };
@@ -66,7 +77,9 @@ export const AppPeliculas = () => {
       </form>
 
       <div className="movie-list">
-        {dataPeliculas.map((pelicula) => (
+        { dataPeliculas ? <p>Cargando...</p>
+                        : errors ? <p>ha ocurrido un errors... {errors}</p>
+                        : dataPeliculas.map((pelicula) => (
           <div key={pelicula.id} className="movie-card">
             <img
               src={`https://image.tmdb.org/t/p/w500${pelicula.poster_path}`}
