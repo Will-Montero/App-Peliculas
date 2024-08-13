@@ -1,11 +1,12 @@
 import './styles/home.css'
+import  laAbuela from './assets/homePeliculas/laAbuela.webp'
 export const Home = () => {
   return (
   <>
   <section  className="container-home">
     <div className="lista-cards">
         <div className="pelicula-card">
-        <img className="imagen-card"/>
+        <img src={laAbuela} className="imagen-card"/>
         <h3 className="titulo-card"></h3>
         </div>
     </div>
