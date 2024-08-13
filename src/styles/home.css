@@ -10,11 +10,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 4px;
-    place-content: center;
 }
 .pelicula-card {
-    width: 30vw;
-    height: 25vh;
+    margin: 5px 5px;
+    width: 27vw;
+    height: 22vh;
 }
 .imagen-card {
     width: 98%;
