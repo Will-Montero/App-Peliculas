@@ -3,6 +3,7 @@
   margin: 0 auto;
   color: white;
   letter-spacing: 0.6px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,   ;
 }
 .peliculas-header{
   margin: 0 auto;
@@ -111,13 +112,13 @@
 }
 
 .movie-title {
-  margin: 15px 5px;
+  margin: 15px 7px;
   font-size: 9px;
   margin-bottom: 3px;
 }
 
 .movie-year-details {
-  margin: 8px 5px;
+  margin: 8px 7px;
   font-size: 9px;
   margin-bottom: 0px;
 }
