@@ -1,5 +1,6 @@
 import { useState } from "react";
 import lupaBusqueda from "./assets/lupaBusqueda.png";
+import { Home } from "../Home";
 import './styles/appPeliculas.css'
 
 export const AppPeliculas = () => {
@@ -42,6 +43,7 @@ export const AppPeliculas = () => {
 
   return (
    <>
+      <Home></Home>
     <div className="container">
       <header className="peliculas-header">
       <h1 className="title">PelisFree</h1>  
