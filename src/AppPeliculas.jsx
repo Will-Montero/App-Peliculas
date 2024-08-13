@@ -1,5 +1,6 @@
 import { useState } from "react";
 import lupaBusqueda from "./assets/lupaBusqueda.png";
+import { Home} from './Home'
 
 import "./styles/appPeliculas.css";
 
@@ -58,6 +59,7 @@ export const AppPeliculas = () => {
         </button>
       </form>
 
+ <Home></Home>
 
       <div className="movie-list">
         {dataPeliculas.map((pelicula) => (
