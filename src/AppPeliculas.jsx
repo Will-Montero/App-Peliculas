@@ -58,9 +58,6 @@ export const AppPeliculas = () => {
           <img src={lupaBusqueda} alt="Buscar" className="search-icon" />
         </button>
       </form>
-
- <Home></Home>
-
       <div className="movie-list">
         {dataPeliculas.map((pelicula) => (
           <div key={pelicula.id} className="movie-card">
