@@ -1,10 +1,8 @@
 import { useState } from "react";
 import lupaBusqueda from "./assets/lupaBusqueda.png";
-import './styles/appPeliculas.css'
-import { Home } from "./Home";
+import './styles/appPeliculas.css';
 
 export const AppPeliculas = () => {
-
   const URL = "https://api.themoviedb.org/3/search/movie";
   const API_KEY = "9b99ed6f20e2bfc951d790cf5a420564";
 
@@ -13,14 +11,12 @@ export const AppPeliculas = () => {
 
   const fetchPeliculas = async () => {
     try {
-      const response = await fetch(
-        `${URL}?query=${busqueda}&api_key=${API_KEY}`
-      );
+      const response = await fetch(`${URL}?query=${busqueda}&api_key=${API_KEY}`);
       const data = await response.json();
       setDataPeliculas(data.results);
       console.log(data);
     } catch (error) {
-      console.error(" este es el error: ", error);
+      console.error("Error: ", error);
     }
   };
 
@@ -32,7 +28,7 @@ export const AppPeliculas = () => {
   const handleOnChange = (e) => {
     setBusqueda(e.target.value);
   };
-  
+
   const limitarPalabras = (texto, maxPalabras) => {
     const palabras = texto.split(" ");
     if (palabras.length > maxPalabras) {
@@ -42,10 +38,9 @@ export const AppPeliculas = () => {
   };
 
   return (
-   <>
     <div className="container">
       <header className="peliculas-header">
-      <h1 className="title">PelisFree</h1>  
+        <h1 className="title">PelisFree</h1>
       </header>
       <form onSubmit={handleSubmit} className="search-form">
         <input
@@ -60,22 +55,27 @@ export const AppPeliculas = () => {
         </button>
       </form>
 
-      <Home></Home>
-
       <div className="movie-list">
         {dataPeliculas.map((pelicula) => (
           <div key={pelicula.id} className="movie-card">
+            <div className="movie-info">
+              <span className="movie-year">{pelicula.release_date.split("-")[0]}</span>
+              <span className="movie-title-overlay">{limitarPalabras(pelicula.title, 5)}</span>
+            </div>
             <img
               src={`https://image.tmdb.org/t/p/w500${pelicula.poster_path}`}
               alt={pelicula.title}
               className="movie-poster"
             />
-            <h2 className="movie-title">{limitarPalabras(pelicula.title, 5)}</h2>
-            {/* <p className="movie-overview">{pelicula.overview}</p> */}
+            <div className="movie-details">
+              <h2 className="movie-title">{pelicula.title}</h2>
+              <p className="movie-year-details">{pelicula.release_date.split("-")[0]}</p>
+              <p className="movie-overview">{limitarPalabras(pelicula.overview, 20)}</p>
+              <p className="movie-genre">Género: {pelicula.genre_ids.join(", ")}</p>
+            </div>
           </div>
         ))}
       </div>
     </div>
-   </>
   );
 };
