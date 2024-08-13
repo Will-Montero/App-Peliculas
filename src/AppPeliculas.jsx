@@ -8,7 +8,11 @@ export const AppPeliculas = () => {
   const API_KEY = "9b99ed6f20e2bfc951d790cf5a420564";
 
   const [busqueda, setBusqueda] = useState("");
-  const [dataPeliculas, setDataPeliculas] = useState([]);
+  const [dataPeliculas, setDataPeliculas] = useState({
+    data: ([]),
+    isLoading: true,
+    errors: null
+  });
 
   const fetchPeliculas = async () => {
     try {
