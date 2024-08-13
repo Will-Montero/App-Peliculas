@@ -4,7 +4,39 @@
   color: white;
 }
 .peliculas-header{
-  
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.search-form {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-bottom: 20px;
+}
+.search-input{
+  background-color: rgb(0, 0, 0);
+  color: #ccc;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 0 5px;
+  margin: 0 5px;
+  height: 5vh;
+  align-content: center;
+}
+.search-button{
+  color: #ccc;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 0 5px;
+  margin: 0 5px;
+  height: 5vh;
+  align-content: center;
 }
 
 .movie-list {
@@ -111,10 +143,16 @@
     height: 30vh;
     width: 10vw;
     background-color: rgba(0, 0, 0, 0.7);
-    color: white;
+    color: rgb(114, 164, 230);
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
     border-radius: 10px;
+  }
+  .movie-year {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2px 2px;
+    font-size: 10px;
+    border-radius: 3px;
   }
 
   .movie-card:hover .movie-poster {
@@ -123,13 +161,6 @@
 
   .movie-card:hover .movie-details {
     opacity: 1;
-  }
-
-  .movie-year {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 2px 2px;
-    font-size: 10px;
-    border-radius: 3px;
   }
 
   .movie-poster {
