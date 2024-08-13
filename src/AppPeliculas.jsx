@@ -1,6 +1,6 @@
 import { useState } from "react";
 import lupaBusqueda from "./assets/lupaBusqueda.png";
-import './styles/appPeliculas.css';
+import "./styles/appPeliculas.css";
 
 export const AppPeliculas = () => {
   const URL = "https://api.themoviedb.org/3/search/movie";
@@ -11,7 +11,9 @@ export const AppPeliculas = () => {
 
   const fetchPeliculas = async () => {
     try {
-      const response = await fetch(`${URL}?query=${busqueda}&api_key=${API_KEY}`);
+      const response = await fetch(
+        `${URL}?query=${busqueda}&api_key=${API_KEY}`
+      );
       const data = await response.json();
       setDataPeliculas(data.results);
       console.log(data);
@@ -59,18 +61,27 @@ export const AppPeliculas = () => {
         {dataPeliculas.map((pelicula) => (
           <div key={pelicula.id} className="movie-card">
             <div className="movie-info">
-              <span className="movie-year">{pelicula.release_date.split("-")[0]}</span>
+              <span className="movie-year">
+                {pelicula.release_date.split("-")[0]}
+              </span>
             </div>
-           { <img
-              src={`https://image.tmdb.org/t/p/w500${pelicula.poster_path}`}
-              alt={pelicula.title}
-              className="movie-poster"
-            />}
+            {
+              <img
+                src={`https://image.tmdb.org/t/p/w500${pelicula.poster_path}`}
+                alt={pelicula.title}
+                className="movie-poster"
+              />
+            }
             <div className="movie-details">
-              <h2 className="movie-title">{limitarPalabras(pelicula.title, 4)}</h2>
-              <p className="movie-year-details">{pelicula.release_date.split("-")[0]}</p>
-              <p className="movie-overview">{limitarPalabras(pelicula.overview, 25)}</p>
-             
+              <h2 className="movie-title">
+                {limitarPalabras(pelicula.title, 4)}
+              </h2>
+              <p className="movie-year-details">
+                {pelicula.release_date.split("-")[0]}
+              </p>
+              <p className="movie-overview">
+                {limitarPalabras(pelicula.overview, 25)}
+              </p>
             </div>
           </div>
         ))}
