@@ -18,11 +18,12 @@
   justify-content: center;
   align-content: center;
   padding-bottom: 20px;
+  color: #ccc;
 }
 .search-input{
   background-color: rgb(0, 0, 0);
-  color: #ccc;
-  border: none;
+  color: #dcd5d5;
+  border-color: rgb(255, 255, 255);
   border-radius: 10px;
   font-size: 14px;
   padding: 0 5px;
@@ -33,7 +34,8 @@
 .search-button{
   color: #ccc;
   border: none;
-  border-radius: 10px;
+  border-radius: 50%;
+  margin: 10px;
   font-size: 14px;
   padding: 0 5px;
   margin: 0 5px;
@@ -64,6 +66,11 @@
   width: 27vw;
   transition: opacity 0.3s ease-in-out;
 }
+.movie-info {
+  position: absolute;
+  padding: 1px 3px;
+  font-size: px;
+}
 
 .movie-details {
   position: absolute;
@@ -93,14 +100,6 @@
 }
 
 .movie-poster {
-  height: 30vh;
-  width: 10vw;
-  object-fit: cover;
-}
-
-
-
-.movie-poster {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -114,26 +113,22 @@
 }
 
 .movie-title {
-  margin: 15px 7px;
-  font-size: 9px;
+  margin: 5px 7px;
+  font-size: 8px;
   margin-bottom: 3px;
 }
 
 .movie-year-details {
-  margin: 8px 7px;
-  font-size: 9px;
+  margin: 5px 7px;
+  font-size: 8px;
   margin-bottom: 0px;
 }
 
 .movie-overview {
-  margin: 8px 1px 5px 7px;
+  margin: 5px 1px 5px 7px;
   font-size: 9px;
   width: 90%;
-}
-
-.movie-genre {
-  font-size: 12px;
-  color: #ccc;
+  letter-spacing: 0.5px;
 }
 
 /*para pantallas grandes*/
@@ -161,6 +156,7 @@
     border-radius: 10px;
     height: 30vh;
     width: 10vw;
+  box-shadow: 0 0 0.5px wheat;
   }
 
   .movie-poster {
@@ -197,17 +193,16 @@
   }
 
   .movie-poster {
-    height: 30vh;
-    width: 10vw;
-    object-fit: cover;
+    height: 100%;
+    width: 100%;
   }
 
   .movie-details {
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
     border-radius: 10px;
-    height: 30vh;
-    width: 10vw;
+    height: 100%;
+    width: 100%;
   }
 
   .movie-title {
