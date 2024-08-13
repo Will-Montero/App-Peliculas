@@ -10,7 +10,7 @@ export const AppPeliculas = () => {
   const [busqueda, setBusqueda] = useState("");
   const [dataPeliculas, setDataPeliculas] = useState({
     data: ([]),
-    isLoading: true,
+    isLoading: false,
     errors: null
   });
 
@@ -23,7 +23,7 @@ export const AppPeliculas = () => {
       );
       const data = await response.json();
       setDataPeliculas({
-        data: data.results,
+        data,
         isLoading: false,
         errors: null
       });
