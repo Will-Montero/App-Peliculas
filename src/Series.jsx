@@ -34,9 +34,9 @@ export const Series = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container-series">
         <header className="header-series">
-          <h1 className="title">SeriesFree</h1>
+          <h1 className="title">Series Online ▶️</h1>
         </header>
         <div className="series-list">
           {dataSeries.map((serie) => (

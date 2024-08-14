@@ -201,7 +201,7 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 5px 5px;
+  gap: 5px;
 }
 
 /* Estilos para cada tarjeta de película */
