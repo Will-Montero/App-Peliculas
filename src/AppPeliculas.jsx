@@ -54,12 +54,12 @@ export const AppPeliculas = () => {
   return (
     <>
     <div className="container">
-      <header onSubmit={handleSubmit}  className="header-peliculas">
+      <header  className="header-peliculas">
         {!isSearching && <h1 className="title">PelisFree</h1>}
         {isSearching ?
          /* <form onSubmit={handleSubmit} className="search-form"> */
        
-        <form className="form-buscar" >
+        <form onSubmit={handleSubmit}  className="form-buscar" >
            <>
          <input
             type="text"
@@ -68,7 +68,7 @@ export const AppPeliculas = () => {
             onChange={handleOnChange}
             className="search-input"
           />
-           <button className="exit-button" onClick={handleExitClick}>
+           <button type="button" className="exit-button" onClick={handleExitClick}>
             X
           </button>
          </>
@@ -88,13 +88,13 @@ export const AppPeliculas = () => {
                 {pelicula.release_date.split("-")[0]}
               </span>
             </div>
-            {
+            
               <img
                 src={`https://image.tmdb.org/t/p/w500${pelicula.poster_path}`}
                 alt={pelicula.title}
                 className="movie-poster"
               />
-            }
+            
             <div className="movie-details">
               <h2 className="movie-title">
                 {limitarPalabras(pelicula.title, 4)}
@@ -110,7 +110,6 @@ export const AppPeliculas = () => {
         ))}
       </div>
     </div>
-  );
     </>
   )
 };
