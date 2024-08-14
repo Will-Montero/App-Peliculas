@@ -176,7 +176,7 @@
 } */
 /* Estilos generales para el contenedor */
 .home-container {
-  width: 95%;
+  width: 98%;
   margin: 0 auto;
   letter-spacing: 0.6px;
   background-color: black;
@@ -210,12 +210,12 @@
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  height: 20vh;
+  height: 23vh;
 }
 
 .movie-poster {
-  height: 25vh;
-  width: 30vw;
+  height: 18vh;
+  width: 100%;
   transition: opacity 0.3s ease-in-out;
 }
 
