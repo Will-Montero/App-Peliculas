@@ -6,6 +6,8 @@ import rapidos from './assets/homePeliculas/rapidos.jpg'
 import hitman from './assets/homePeliculas/hitman.jpg'
 import terminator from './assets/homePeliculas/terminator.jpg'
 import pasajeros from './assets/homePeliculas/pasajeros.jpg'
+import final from './assets/homePeliculas/final.jpg'
+import guerra from './assets/homePeliculas/guerra.jpg'
 export const Home = () => {
   return (
   <>
@@ -75,21 +77,21 @@ export const Home = () => {
         </div>
         </div>
         <div className="pelicula-card">
-        <img src={laAbuela}
+        <img src={final}
         loading='lazy' className="imagen-card"/>
         <div className='info-peli'>
-        <p className="titulo-card">La abuela</p>
-        <p className='info-peli-año'>2021</p>
-        <p className='info-peli-resumen'>Pilar llega a su apartamento donde encuentra el cuerpo de otra mujer de su misma edad. Después, una joven desnuda se aparece frente a ella y le besa la mano. </p>
+        <p className="titulo-card">Destino final 5</p>
+        <p className='info-peli-año'>2011</p>
+        <p className='info-peli-resumen'>Sam Lawton Nicholas Agosto tiene una premonición sobre la destrucción de un puente colgante que causaría su muerte y la de otras personas. La visión se hace realidad, pero Sam... </p>
         </div>
         </div>
         <div className="pelicula-card">
-        <img src={laAbuela}
+        <img src={guerra}
         loading='lazy' className="imagen-card"/>
         <div className='info-peli'>
-        <h3 className="titulo-card">La abuela</h3>
-        <p className='info-peli-año'>2021</p>
-        <p className='info-peli-resumen'>Pilar llega a su apartamento donde encuentra el cuerpo de otra mujer de su misma edad. Después, una joven desnuda se aparece frente a ella y le besa la mano. </p>
+        <h3 className="titulo-card">Guerra mundial Z</h3>
+        <p className='info-peli-año'>2013</p>
+        <p className='info-peli-resumen'>Cuando una pandemia de zombis amenaza con destruir a la humanidad, un antiguo investigador de la ONU emprende una peligrosa misión por el mundo para dar con ...</p>
         </div>
         </div>
     </div>
