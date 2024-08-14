@@ -19,7 +19,7 @@ export const Home = () => {
   return (
     <>
       <section className="container-home">
-        <h2 className="titulo-home">Ver película</h2>
+        <h3 className="titulo-home">Ver película</h3>
         <div className="lista-cards">
           <div className="pelicula-card">
             <img src={laAbuela} loading="lazy" className="imagen-card" />

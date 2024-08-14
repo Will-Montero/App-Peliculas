@@ -5,10 +5,12 @@
   letter-spacing: 0.6px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont;
 }
+.titulo-home {
+  margin: 35px auto 10px;
+}
 
 .lista-cards {
   width: 100%;
-  padding: 5px 10px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
