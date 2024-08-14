@@ -1,10 +1,9 @@
 /* Estilos para dispositivos móviles */
 .container-series {
-    width: 100%;
+    width: 96%;
     padding: 10px;
     background-color: black;
     color: white;
-    margin: 0 auto;
 }
 
 .header-series {
@@ -15,7 +14,6 @@
 
 .series-list {
     width: 100%;
-    padding: 5px 0;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -31,7 +29,7 @@
 
 .series-poster {
     width: 100%;
-    height: 100%;
+    height: 23vh;
     object-fit: cover;
     border-radius: 10px;
 }
