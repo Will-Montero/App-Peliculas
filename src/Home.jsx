@@ -234,7 +234,7 @@ export const Home = () => {
       <header className="header-home">
         <h1 className="title-home">Películas Online ▶️</h1>
       </header>
-      <div className="movie-list">
+      <div className="movie-list-home">
         {dataPeliculas.map((pelicula) => (
           <div key={pelicula.id} className="movie-card">
             <div className="movie-info">
@@ -242,7 +242,7 @@ export const Home = () => {
                 {pelicula.release_date.split("-")[0]}
               </span>
             </div>
-            <img
+            <img loading="lazy"
               src={`https://image.tmdb.org/t/p/w500${pelicula.poster_path}`}
               alt={pelicula.title}
               className="movie-poster"
