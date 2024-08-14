@@ -1,4 +1,4 @@
-import "./styles/home.css";
+/* import "./styles/home.css";
 import laAbuela from "./assets/homePeliculas/laAbuela.webp";
 import aFondo from "./assets/homePeliculas/aFondo.jpg";
 import niebla from "./assets/homePeliculas/niebla.jpg";
@@ -193,5 +193,74 @@ export const Home = () => {
         </div>
       </section>
     </>
+  );
+};
+ */
+
+import { useEffect, useState } from "react";
+import "./styles/home.css";
+
+export const Home = () => {
+  const URL = "https://api.themoviedb.org/3/movie/popular";
+  const API_KEY = "9b99ed6f20e2bfc951d790cf5a420564";
+
+  const [dataPeliculas, setDataPeliculas] = useState([]);
+
+  const fetchPeliculas = async () => {
+    try {
+      const response = await fetch(`${URL}?api_key=${API_KEY}`);
+      const data = await response.json();
+      setDataPeliculas(data.results);
+      console.log(data);
+    } catch (error) {
+      console.error("Error: ", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchPeliculas();
+  }, []);
+
+  const limitarPalabras = (texto, maxPalabras) => {
+    const palabras = texto.split(" ");
+    if (palabras.length > maxPalabras) {
+      return palabras.slice(0, maxPalabras).join(" ") + "...";
+    }
+    return texto;
+  };
+
+  return (
+    <div className="home-container">
+      <header className="header-home">
+        <h1 className="title-home">Películas Online ▶️</h1>
+      </header>
+      <div className="movie-list">
+        {dataPeliculas.map((pelicula) => (
+          <div key={pelicula.id} className="movie-card">
+            <div className="movie-info">
+              <span className="movie-year">
+                {pelicula.release_date.split("-")[0]}
+              </span>
+            </div>
+            <img
+              src={`https://image.tmdb.org/t/p/w500${pelicula.poster_path}`}
+              alt={pelicula.title}
+              className="movie-poster"
+            />
+            <div className="movie-details">
+              <h2 className="movie-title">
+                {limitarPalabras(pelicula.title, 4)}
+              </h2>
+              <p className="movie-year-details">
+                {pelicula.release_date.split("-")[0]}
+              </p>
+              <p className="movie-overview">
+                {limitarPalabras(pelicula.overview, 25)}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 };

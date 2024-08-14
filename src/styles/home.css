@@ -1,4 +1,4 @@
-.container-home {
+/* .container-home {
   width: 95%;
   margin: 0 auto;
   color: white;
@@ -85,7 +85,7 @@
 }
 
 /*para pantallas grandes*/
-@media (min-width: 500px) {
+/* @media (min-width: 500px) {
   .container-home {
     width: 100%;
     margin: 0 auto;
@@ -172,5 +172,113 @@
     margin-top: 12px;
     font-size: 11px;
     margin-bottom: 8px;
+  }
+} */
+/* Estilos generales para el contenedor */
+.home-container {
+  width: 95%;
+  background-color: black;
+  color: white;
+}
+
+/* Estilos para el header */
+.header-home {
+  padding: 5px 0px
+}
+
+.title-home {
+  font-size: 20px;
+  color: #5acbff;
+}
+
+/* Estilos para la lista de películas */
+.movie-list {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px 5px;
+}
+
+/* Estilos para cada tarjeta de película */
+.movie-card {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.movie-poster {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.movie-details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.movie-card:hover .movie-info,
+.movie-card:hover .movie-details {
+  opacity: 1;
+}
+
+.movie-year{
+  position: absolute;
+  font-size: 11px;
+  margin: 5px 5px;
+  color: #ddd;
+}
+
+.movie-title {
+  font-size: 12px;
+  margin: 15px 10px;
+  color: #5acbff;
+}
+
+
+.movie-year-details {
+  font-size: 11px;
+  margin: 5px 10px;
+  color: #ddd;
+}
+
+.movie-overview {
+  font-size: 11;
+  color: #ccc;
+  margin-top: 5px;
+}
+
+/* Media query para pantallas medianas */
+@media (min-width: 768px) {
+  .movie-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .title-home {
+    font-size: 28px;
+  }
+}
+
+/* Media query para pantallas grandes */
+@media (min-width: 1024px) {
+  .movie-list {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  .title-home {
+    font-size: 32px;
+  }
+
+  .movie-title {
+    font-size: 20px;
   }
 }
