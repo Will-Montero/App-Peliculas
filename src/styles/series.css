@@ -85,14 +85,131 @@
 }
 
 /* Media query para pantallas más grandes */
-@media (min-width: 768px) {
-    .series-list {
-        grid-template-columns: repeat(4, 1fr);
+@media (min-width: 680px) {
+    .container-series {
+        width: 100%;
+        background-color: black;
+        color: white;
+        margin: 0 auto;
     }
+
+    .series-list {
+        width: 85%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 5px;
+    }
+    
+    .series-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .series-poster {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    
+    .series-info {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 2px 5px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+
+    
+    .series-card:hover .series-details {
+        opacity: 1;
+    }
+    .series-year {
+        position: absolute;
+        background-color: rgb(16, 16, 16);
+        padding: 1px 2px;
+    }
+    
+    .series-title {
+        font-size: 12px;
+        margin: 5px 10px;
+        color: #5acbff;
+    }
+    .series-year-details{
+        font-size: 10px;
+        margin: 5px 10px;
+    }
+    
+    .series-overview {
+        font-size: 11px;
+        margin: 5px;
+    }
+    
 }
 
 @media (min-width: 1024px) {
+    .container-series {
+        width: 100%;
+        background-color: black;
+        color: white;
+    }
+    
+    .header-series {
+        padding: 5px 330px;
+        
+    }
+    
     .series-list {
-        grid-template-columns: repeat(4, 1fr);
+        width: 55%;
+        padding: 5px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 5px;
+    }
+    
+    .series-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .series-poster {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    
+    .series-card:hover .series-details {
+        opacity: 1;
+    }
+    .series-year {
+        position: absolute;
+        background-color: rgb(16, 16, 16);
+        padding: 1px 2px;
+    }
+    
+    .series-title {
+        font-size: 13px;
+        margin: 5px 10px;
+        color: #5acbff;
+    }
+    .series-year-details{
+        font-size: 11px;
+        margin: 5px 10px;
+    }
+    
+    .series-overview {
+        font-size: 13px;
+        margin: 8px;
     }
 }
