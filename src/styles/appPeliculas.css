@@ -31,6 +31,10 @@
   height: 5vh;
   align-content: center;
 }
+.exit-button{
+  display: ;
+  justify-content: end;
+}
 .search-button{
   color: #ccc;
   border: none;
@@ -134,11 +138,52 @@
 /*para pantallas grandes*/
 @media (min-width: 700px) {
   .container {
-    width: 55%;
+    width: 100%;
     margin: 0 auto;
     color: white;
     letter-spacing: 0.6px;
   }
+  
+  .header-peliculas {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    position: relative;
+  }
+  .search-button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  .form-buscar{
+    margin: 10px auto;
+    width: 90%;
+  }
+
+.search-input {
+  width: 90%;
+  background-color: #ccc;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+}
+
+.exit-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
 
   .movie-list {
     display: grid;

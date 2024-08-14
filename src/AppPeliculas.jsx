@@ -1,6 +1,5 @@
 import { useState } from "react";
-import lupaBusqueda from "./assets/lupaBusqueda.png";
-import { Home} from './Home'
+
 
 import "./styles/appPeliculas.css";
 
@@ -8,8 +7,17 @@ export const AppPeliculas = () => {
   const URL = "https://api.themoviedb.org/3/search/movie";
   const API_KEY = "9b99ed6f20e2bfc951d790cf5a420564";
 
+  const [isSearching, setIsSearching] = useState(false)
   const [busqueda, setBusqueda] = useState("");
   const [dataPeliculas, setDataPeliculas] = useState([]);
+
+  const handleSearchClick = () => {
+    setIsSearching(true)
+  }
+  const handleExitClick = () => {
+    setIsSearching(false);
+    setBusqueda('');
+  };
 
   const fetchPeliculas = async () => {
     try {
@@ -29,6 +37,8 @@ export const AppPeliculas = () => {
     if (busqueda.length > 1) fetchPeliculas();
   };
 
+ 
+
   const handleOnChange = (e) => {
     setBusqueda(e.target.value);
   };
@@ -42,22 +52,34 @@ export const AppPeliculas = () => {
   };
 
   return (
+    <>
     <div className="container">
-      <header className="peliculas-header">
-        <h1 className="title">PelisFree</h1>
-      </header>
-      <form onSubmit={handleSubmit} className="search-form">
-        <input
-          type="text"
-          placeholder="Enter movie"
-          value={busqueda}
-          onChange={handleOnChange}
-          className="search-input"
-        />
-        <button type="submit" className="search-button">
-          <img src={lupaBusqueda} alt="Buscar" className="search-icon" />
+      <header onSubmit={handleSubmit}  className="header-peliculas">
+        {!isSearching && <h1 className="title">PelisFree</h1>}
+        {isSearching ?
+         /* <form onSubmit={handleSubmit} className="search-form"> */
+       
+        <form className="form-buscar" >
+           <>
+         <input
+            type="text"
+            placeholder="Enter movie"
+            value={busqueda}
+            onChange={handleOnChange}
+            className="search-input"
+          />
+           <button className="exit-button" onClick={handleExitClick}>
+            X
+          </button>
+         </>
+        </form>
+          :
+
+          <button className="search-button" onClick={handleSearchClick}>
+          Search
         </button>
-      </form>
+        }
+      </header>
       <div className="movie-list">
         {dataPeliculas.map((pelicula) => (
           <div key={pelicula.id} className="movie-card">
@@ -89,4 +111,6 @@ export const AppPeliculas = () => {
       </div>
     </div>
   );
+    </>
+  )
 };
