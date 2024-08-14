@@ -85,7 +85,7 @@
 }
 
 /*para pantallas grandes*/
-@media (min-width: 700px) {
+@media (min-width: 500px) {
   .container-home {
     width: 100%;
     margin: 0 auto;
