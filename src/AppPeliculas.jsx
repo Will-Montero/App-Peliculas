@@ -74,7 +74,6 @@ export const AppPeliculas = () => {
          </>
         </form>
           :
-
           <button className="search-button" onClick={handleSearchClick}>
           Search
         </button>
