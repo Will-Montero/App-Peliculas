@@ -176,8 +176,12 @@
 } */
 /* Estilos generales para el contenedor */
 .home-container {
+  width: 95%;
+  margin: 0 auto;
+  letter-spacing: 0.6px;
   background-color: black;
   color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,;
 }
 
 /* Estilos para el header */
@@ -192,6 +196,8 @@
 
 /* Estilos para la lista de películas */
 .movie-list-home {
+  width: 100%;
+  padding: 5px 0;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -200,18 +206,17 @@
 
 /* Estilos para cada tarjeta de película */
 .movie-card {
-  height: 25vh;
-  width: 30vw;
+  margin: 0 auto;
   position: relative;
-  border-radius: 5px;
   overflow: hidden;
+  height: 30vh;
+  width: 30vw;
 }
 
 .movie-poster {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  transition: opacity 0.3s ease;
+  height: 22vh;
+  width: 27vw;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .movie-details {
@@ -223,13 +228,18 @@
   display: flex;
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.7);
-  opacity: 1;
+  opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .movie-card:hover .movie-info,
 .movie-card:hover .movie-details {
   opacity: 1;
+}
+.movie-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .movie-year{
@@ -317,10 +327,13 @@
     background-color: black;
     color: white;
   }
+  .header-home {
+    padding: 5px 260px
+  }
 
   .movie-list-home {
-    width: 60%;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 55%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 
   .movie-card {
