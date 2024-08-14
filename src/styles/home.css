@@ -206,16 +206,16 @@
 
 /* Estilos para cada tarjeta de película */
 .movie-card {
+  width: 100%;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  height: 30vh;
-  width: 30vw;
+  height: 20vh;
 }
 
 .movie-poster {
-  height: 22vh;
-  width: 27vw;
+  height: 25vh;
+  width: 30vw;
   transition: opacity 0.3s ease-in-out;
 }
 
@@ -250,20 +250,20 @@
 }
 
 .movie-title {
-  font-size: 12px;
+  font-size: 11px;
   margin: 5px 10px;
   color: #5acbff;
 }
 
 
 .movie-year-details {
-  font-size: 11px;
+  font-size: 9px;
   margin: 5px 10px;
   color: #ddd;
 }
 
 .movie-overview {
-  font-size: 11;
+  font-size: 10;
   color: #ccc;
   margin-top: 5px;
 }
