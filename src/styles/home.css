@@ -91,6 +91,10 @@
     letter-spacing: 0.6px;
 
   }
+  .titulo-home {
+    width: 55%;
+    margin: 35px auto 10px;
+  }
 
   .lista-cards {
     margin: 0 auto;

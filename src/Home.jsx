@@ -12,10 +12,14 @@ import resident from './assets/homePeliculas/resident.jpg'
 import titanic from './assets/homePeliculas/titanic.jpg'
 import redSocial from './assets/homePeliculas/redSocial.jpg'
 import dune from './assets/homePeliculas/dune.jpg'
+import rubias from './assets/homePeliculas/rubias.jpg'
+import laNiebla from './assets/homePeliculas/laNiebla.jpg'
 export const Home = () => {
+
   return (
     <>
       <section className="container-home">
+        <h2 className="titulo-home">Ver película</h2>
         <div className="lista-cards">
           <div className="pelicula-card">
             <img src={laAbuela} loading="lazy" className="imagen-card" />
@@ -165,7 +169,26 @@ export const Home = () => {
               </p>
             </div>
           </div>
-          
+          <div className="pelicula-card">
+            <img src={rubias} loading="lazy" className="imagen-card" />
+            <div className="info-peli">
+              <h3 className="titulo-card">¿Dónde están las rubias?</h3>
+              <p className="info-peli-año">2004</p>
+              <p className="info-peli-resumen">
+              Dos agentes del FBI de raza negra se disfrazan de mujeres blancas para hacerse pasar por las herederas a las que deben proteger de un inminente secuestro.
+              </p>
+            </div>
+          </div>
+          <div className="pelicula-card">
+            <img src={laNiebla} loading="lazy" className="imagen-card" />
+            <div className="info-peli">
+              <h3 className="titulo-card">La niebla</h3>
+              <p className="info-peli-año">2007</p>
+              <p className="info-peli-resumen">
+              La familia Copeland se separa cuando una extraña niebla, que oculta seres mortíferos, invade su pequeño pueblo y lo aísla del resto del mundo.
+              </p>
+            </div>
+          </div>
 
         </div>
       </section>
