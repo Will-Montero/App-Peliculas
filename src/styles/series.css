@@ -1,0 +1,90 @@
+/* Estilos para dispositivos móviles */
+.container {
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    margin: 0 auto;
+}
+
+.header-series {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.title {
+    font-size: 20px;
+    color: white;
+}
+
+.series-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.series-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 40vh;
+}
+
+.series-poster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.series-info {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.series-details {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.series-card:hover .series-details {
+    transform: translateY(0);
+}
+
+.series-title {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.series-year-details, .series-overview {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+/* Media query para pantallas más grandes */
+@media (min-width: 768px) {
+    .series-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .series-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
