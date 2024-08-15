@@ -54,31 +54,33 @@ export const AppPeliculas = () => {
   return (
     <>
     <div className="container">
-      <header  className="header-peliculas">
-        {!isSearching && <h1 className="title-pelis">PelisFree</h1>}
-        {isSearching ?
-         /* <form onSubmit={handleSubmit} className="search-form"> */
-       
-        <form onSubmit={handleSubmit}  className="form-buscar" >
-           <>
-         <input
-            type="text"
-            placeholder="Enter movie"
-            value={busqueda}
-            onChange={handleOnChange}
-            className="search-input"
-          />
-           <button type="button" className="exit-button" onClick={handleExitClick}>
-            X
-          </button>
-         </>
-        </form>
-          :
-          <button className="search-button" onClick={handleSearchClick}>
-          🔍
+    <header className="header-peliculas">
+  <div className={`header-content ${isSearching ? 'searching' : ''}`}>
+    {!isSearching && <h1 className="title-pelis">PelisFree</h1>}
+    {isSearching ? (
+      <form onSubmit={handleSubmit} className="form-buscar">
+        <input
+          type="text"
+          placeholder="Enter movie"
+          value={busqueda}
+          onChange={handleOnChange}
+          className="search-input"
+        />
+        <button
+          type="button"
+          className="exit-button"
+          onClick={handleExitClick}
+        >
+          X
         </button>
-        }
-      </header>
+      </form>
+    ) : (
+      <button className="search-button" onClick={handleSearchClick}>
+        🔍
+      </button>
+    )}
+  </div>
+</header>
       <div className="movie-list">
         {dataPeliculas.map((pelicula) => (
           <div key={pelicula.id} className="movie-card">

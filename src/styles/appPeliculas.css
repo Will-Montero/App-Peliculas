@@ -5,6 +5,7 @@
   letter-spacing: 0.6px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont;
 }
+
 .header-peliculas {
   font-family: serif;
   color: rgb(231, 236, 243);
@@ -12,15 +13,24 @@
   margin: 0 5px;
   display: flex;
   justify-content: space-evenly;
-  
+  transition: all 5s ease-in-out;
 }
-.title-pelis {
-  filter: drop-shadow( 0.5px 0.8px 1px  #0530bd);
+.header-content {
+  width: 100%;
+  display: flex;
 }
 
-.form-buscar{
+.title-pelis {
+  width: 80%;
+  filter: drop-shadow(0.5px 0.8px 1px #0530bd);
+  transition: opacity 5s ease-in-out;
+  opacity: 1;
+}
+
+.form-buscar {
   margin: 0 auto;
   width: 100%;
+  transition: opacity 5s ease-in-out;
 }
 
 .search-form {
@@ -29,6 +39,7 @@
   color: #ccc;
   position: relative;
 }
+
 .search-input {
   width: 75%;
   background-color: rgb(0, 0, 0);
@@ -42,6 +53,7 @@
   height: 5vh;
   align-content: center;
 }
+
 .exit-button {
   position: absolute;
   border: none;
@@ -51,8 +63,9 @@
   background-color: rgba(200, 10, 10, 0);
   justify-content: end;
   margin: 0 10px;
-  padding-top: 24px;
+  padding-top: 27px;
 }
+
 .search-button {
   background-color: #000000;
   border: none;
@@ -60,6 +73,7 @@
   margin-top: 20px;
   justify-content: end;
   height: 5vh;
+  transition: opacity 5s ease-in-out;
 }
 
 .movie-list {
@@ -82,8 +96,9 @@
 .movie-poster {
   height: 100%;
   width: 100%;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.8s ease-in-out;
 }
+
 .movie-info {
   position: absolute;
   padding: 1px 3px;
@@ -101,6 +116,7 @@
   transition: opacity 0.4s ease-in-out;
   border-radius: 10px;
 }
+
 .movie-year {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 2px 2px;
@@ -169,15 +185,18 @@
     color: white;
     position: relative;
   }
+
   .title-pelis {
-    filter: drop-shadow( 0.5px 0.8px 3px  #0530bd);
+    filter: drop-shadow(0.5px 0.8px 3px #0530bd);
   }
+
   .search-button {
     background-color: #000000;
     font-size: 30px;
     cursor: pointer;
     border-radius: 4px;
   }
+
   .form-buscar {
     width: 50%;
     position: relative;
@@ -188,8 +207,6 @@
     width: 60%;
     color: #c4c4c4;
     border-radius: 50px;
-    
-
   }
 
   .exit-button {
@@ -220,12 +237,12 @@
     box-shadow: 0 0 0.5px;
   }
 
-   .movie-poster {
+  .movie-poster {
     width: 80%;
     height: 80%;
     object-fit: cover;
     transition: opacity 0.3s ease-in-out;
-  } 
+  }
 
   .movie-details {
     position: absolute;
@@ -239,6 +256,7 @@
     transition: opacity 0.4s ease-in-out;
     border-radius: 10px;
   }
+
   .movie-year {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 2px 2px;
@@ -281,4 +299,3 @@
     margin-bottom: 8px;
   }
 }
-
