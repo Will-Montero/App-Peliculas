@@ -35,11 +35,6 @@ export const Novelas = () => {
       <div className="novela-list">
         {dataNovelas.map((novela) => (
           <div key={novela.id} className="novela-card">
-            <div className="novela-info">
-                <span className="novela-year">
-                  {novela.first_air_date.split("-")[0]}
-                </span>
-              </div>
             <img
               src={`https://image.tmdb.org/t/p/w500${novela.poster_path}`}
               alt={limitarPalabras(novela.name, 4)}
