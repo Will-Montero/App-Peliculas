@@ -5,6 +5,7 @@
   color: white;
   letter-spacing: 0.6px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont;
+  background-color: #ccc;
 }
 
 .header-peliculas {
