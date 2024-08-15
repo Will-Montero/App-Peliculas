@@ -50,8 +50,8 @@ export const AppPeliculas = () => {
 
   return (
     <>
-      <div className="container">
-      <header className="header-peliculas">
+  <div className="container">
+  <header className="header-peliculas">
   <div className={`header-content ${isSearching ? "searching" : ""}`}>
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
@@ -68,6 +68,10 @@ export const AppPeliculas = () => {
         </button>
         {/* Título del lado izquierdo */}
         {!isSearching && <a className="navbar-brand" href="#">PelisFree</a>}
+
+        <button className="search-button" onClick={handleSearchClick}>
+                🔍
+              </button>
         
         {/* Botón para expandir el menú en móviles */}
         
@@ -121,8 +125,8 @@ export const AppPeliculas = () => {
           )}
         </div>
          {/* Formulario de búsqueda */}
-         <div className="d-flex ms-auto">
-            {isSearching ? (
+          <div className="d-flex ms-auto">
+            {isSearching && (
               <form onSubmit={handleSubmit} className="form-buscar">
                 <input
                   type="text"
@@ -139,10 +143,6 @@ export const AppPeliculas = () => {
                   X
                 </button>
               </form>
-            ) : (
-              <button className="search-button" onClick={handleSearchClick}>
-                🔍
-              </button>
             )}
           </div>
       </div>
