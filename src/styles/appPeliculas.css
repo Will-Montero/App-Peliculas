@@ -1,5 +1,6 @@
 .container {
   width: 95%;
+  height: 10vh;
   margin: 0 auto;
   color: white;
   letter-spacing: 0.6px;
@@ -31,7 +32,7 @@
 
 .form-buscar {
   margin: 0 auto;
-  margin-top: 27px;
+  margin-top: 13px;
   width: 100%;
   transition: all 7s ease-in-out;
   opacity: 0;
@@ -44,7 +45,7 @@
   width: 75%;
   background-color: rgb(0, 0, 0);
   color: #dcd5d5;
-  border-color: rgb(255, 255, 255);
+  border-top: #dcd5d5;
   border-radius: 30px;
   font-size: 14px;
   height: 5vh;
@@ -57,7 +58,6 @@
   color: #ccc;
   font-size: 35px;
   background-color: rgba(200, 10, 10, 0);
-  margin: 0 10px;
   transition: opacity 7s ease-in-out;
 }
 
@@ -65,10 +65,8 @@
   background-color: #000000;
   border: none;
   font-size: 22px;
-  margin-top: 20px;
   justify-content: end;
-  height: 5vh;
-  transition: all 3s ease-in-out;
+  transition: all 7s ease-in-out;
 }
 
 /* Animaciones visibles durante la búsqueda */
@@ -172,58 +170,14 @@
 /*para pantallas grandes*/
 @media (min-width: 600px) {
   .container {
-    width: 100%;
+    width: 60%;
+    height: 10vh;
     margin: 0 auto;
     color: white;
     letter-spacing: 0.6px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont;
   }
-
-  .header-peliculas {
-    font-family: serif;
-    color: #8dc0f2;
-    margin: 0 auto;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    justify-content: space-evenly;
-    background-color: #000000;
-    color: white;
-    position: relative;
-  }
-
-  .title-pelis {
-    filter: drop-shadow(0.5px 0.8px 3px #0530bd);
-  }
-
-  .search-button {
-    background-color: #000000;
-    font-size: 30px;
-    cursor: pointer;
-    border-radius: 4px;
-  }
-
-  .form-buscar {
-    width: 50%;
-    position: relative;
-  }
-
-  .search-input {
-    padding-left: 10px;
-    width: 60%;
-    color: #c4c4c4;
-    border-radius: 50px;
-  }
-
-  .exit-button {
-    position: absolute;
-    background-color: rgba(255, 0, 0, 0);
-    color: white;
-    border: none;
-    font-size: 28px;
-    padding-top: 28px;
-    cursor: pointer;
-  }
-
+  
   .movie-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
