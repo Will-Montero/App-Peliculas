@@ -1,4 +1,5 @@
 import { useState } from "react";
+import lupaBusqueda from './assets/lupaBusqueda.png'
 
 
 import "./styles/appPeliculas.css";
@@ -75,7 +76,7 @@ export const AppPeliculas = () => {
         </form>
           :
           <button className="search-button" onClick={handleSearchClick}>
-          🔍
+          <img src={lupaBusqueda}  />
         </button>
         }
       </header>
