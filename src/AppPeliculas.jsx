@@ -77,7 +77,30 @@ export const AppPeliculas = () => {
         
         
         {/* Elementos del navbar */}
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+       
+         {/* Formulario de búsqueda */}
+          <div className="d-flex ms-auto">
+            {isSearching && (
+              <form onSubmit={handleSubmit} className="form-buscar">
+                <input
+                  type="text"
+                  placeholder="Enter movie"
+                  value={busqueda}
+                  onChange={handleOnChange}
+                  className="search-input"
+                />
+                <button
+                  type="button"
+                  className="exit-button"
+                  onClick={handleExitClick}
+                >
+                  X
+                </button>
+              </form>
+            )}
+          </div>
+      </div>
+      <div className="collapse navbar-collapse" id="navbarSupportedContent">
           {!isSearching && (
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
@@ -124,28 +147,6 @@ export const AppPeliculas = () => {
             </ul>
           )}
         </div>
-         {/* Formulario de búsqueda */}
-          <div className="d-flex ms-auto">
-            {isSearching && (
-              <form onSubmit={handleSubmit} className="form-buscar">
-                <input
-                  type="text"
-                  placeholder="Enter movie"
-                  value={busqueda}
-                  onChange={handleOnChange}
-                  className="search-input"
-                />
-                <button
-                  type="button"
-                  className="exit-button"
-                  onClick={handleExitClick}
-                >
-                  X
-                </button>
-              </form>
-            )}
-          </div>
-      </div>
     </nav>
   </div>
 </header>
