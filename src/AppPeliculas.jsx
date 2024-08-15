@@ -55,31 +55,29 @@ export const AppPeliculas = () => {
   <div className={`header-content ${isSearching ? "searching" : ""}`}>
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
+      {!isSearching && 
       <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+      className="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span className="navbar-toggler-icon"></span>
+    </button>}
+      
         {/* Título del lado izquierdo */}
         {!isSearching && <a className="navbar-brand" href="#">PelisFree</a>}
 
-        <button className="search-button" onClick={handleSearchClick}>
-                🔍
-              </button>
-        
         {/* Botón para expandir el menú en móviles */}
         
         
         {/* Elementos del navbar */}
        
          {/* Formulario de búsqueda */}
-          <div className="d-flex ms-auto">
+          <div className="form-container d-flex   ms-auto" >
             {isSearching && (
               <form onSubmit={handleSubmit} className="form-buscar">
                 <input
@@ -94,11 +92,16 @@ export const AppPeliculas = () => {
                   className="exit-button"
                   onClick={handleExitClick}
                 >
-                  X
+                  ❌
                 </button>
               </form>
             )}
           </div>
+
+           
+          {!isSearching && <button className="search-button" onClick={handleSearchClick}>
+                🔍
+              </button>}
       </div>
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
           {!isSearching && (
