@@ -55,11 +55,7 @@ export const AppPeliculas = () => {
   <div className={`header-content ${isSearching ? "searching" : ""}`}>
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
-        {/* Título del lado izquierdo */}
-        {!isSearching && <a className="navbar-brand" href="#">PelisFree</a>}
-        
-        {/* Botón para expandir el menú en móviles */}
-        <button
+      <button
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
@@ -70,6 +66,11 @@ export const AppPeliculas = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
+        {/* Título del lado izquierdo */}
+        {!isSearching && <a className="navbar-brand" href="#">PelisFree</a>}
+        
+        {/* Botón para expandir el menú en móviles */}
+        
         
         {/* Elementos del navbar */}
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -118,9 +119,9 @@ export const AppPeliculas = () => {
               </li>
             </ul>
           )}
-          
-          {/* Formulario de búsqueda */}
-          <div className="d-flex ms-auto">
+        </div>
+         {/* Formulario de búsqueda */}
+         <div className="d-flex ms-auto">
             {isSearching ? (
               <form onSubmit={handleSubmit} className="form-buscar">
                 <input
@@ -144,7 +145,6 @@ export const AppPeliculas = () => {
               </button>
             )}
           </div>
-        </div>
       </div>
     </nav>
   </div>
