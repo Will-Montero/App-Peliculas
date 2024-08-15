@@ -46,10 +46,10 @@
 .search-button {
   background-color: #000000;
   border: none;
-  border-radius: 50%;
-  font-size: 40px;
-  padding: 0 5px;
+  font-size: 22px;
+  margin-top: 25px;
   justify-content: end;
+  height: 5vh;
 }
 
 .movie-list {
