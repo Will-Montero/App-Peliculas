@@ -1,7 +1,13 @@
-footer{
-    padding: 0px 100px;
-    text-align: center;
-    font-family: Verdana,;
-    background-color: rgb(0, 0, 0);
+footer {
+    padding: 0 25px;
+    font-size: 10px;
 }
+ @media (min-width: 700px){
+    footer{
+        padding: 0px 100px;
+        text-align: center;
+        font-family: Verdana,;
+        background-color: rgb(0, 0, 0);
+    }
+ }
 
