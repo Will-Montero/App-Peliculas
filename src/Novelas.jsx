@@ -1,4 +1,5 @@
 import { useState, useEffect} from 'react'
+import './styles/novelas.css'
 
 export const Novelas = () => {
 
@@ -30,17 +31,17 @@ export const Novelas = () => {
   };
   return (
     <div className="container-novelas">
-      <h1>Novelas Populares ▶️</h1>
+      <h1 className='novela-titulo'>Novelas Populares ▶️</h1>
       <div className="novela-list">
         {dataSeries.map((novela) => (
           <div key={novela.id} className="novela-card">
-            <div className="series-info">
-                <span className="series-year">
+            <div className="novela-info">
+                <span className="novela-year">
                   {novela.first_air_date.split("-")[0]}
                 </span>
               </div>
             <img
-              src={`https://image.tmdb.org/t/p/w500${serie.poster_path}`}
+              src={`https://image.tmdb.org/t/p/w500${novela.poster_path}`}
               alt={limitarPalabras(novela.name, 4)}
               className="novela-poster"
             />
