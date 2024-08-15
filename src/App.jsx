@@ -11,8 +11,8 @@ export const App = () => {
     <div className="imagen-fondo">
     <AppPeliculas></AppPeliculas>
     <Home></Home>
-    <Novelas></Novelas>
     <Series></Series>
+    <Novelas></Novelas>
     <Footer></Footer>
     </div>
     </>
