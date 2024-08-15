@@ -48,6 +48,7 @@
   border-radius: 30px;
   font-size: 14px;
   height: 5vh;
+  padding-left: 10px;
   transition: width 7s ease-in-out, opacity 3s ease-in-out;
 }
 
