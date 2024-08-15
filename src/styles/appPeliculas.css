@@ -9,16 +9,15 @@
 .header-peliculas {
   font-family: serif;
   color: rgb(231, 236, 243);
+  height: 100%;
   width: 100%;
-  margin: 0 5px;
-  display: flex;
-  justify-content: space-evenly;
 }
 
 .header-content {
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
   transition: all 7s ease-in-out;
 }
 
@@ -27,20 +26,18 @@
   filter: drop-shadow(0.5px 0.8px 1px #0530bd);
   transition: opacity 7s ease-in-out;
   opacity: 1;
+  height: 4vh;
 }
 
 .form-buscar {
   margin: 0 auto;
+  margin-top: 27px;
   width: 100%;
   transition: all 7s ease-in-out;
   opacity: 0;
-}
-
-.search-form {
-  width: 100%;
-  margin: 0 auto;
-  color: #ccc;
-  position: relative;
+  display: flex;
+  align-items: first end;
+  justify-content: space-evenly;
 }
 
 .search-input {
@@ -50,24 +47,16 @@
   border-color: rgb(255, 255, 255);
   border-radius: 30px;
   font-size: 14px;
-  padding-left: 30px;
-  margin: 22px 0px;
-  margin-top: 25px;
   height: 5vh;
-  align-content: center;
   transition: width 7s ease-in-out, opacity 3s ease-in-out;
 }
 
 .exit-button {
-  position: absolute;
   border: none;
   color: #ccc;
-  border-radius: 50%;
   font-size: 35px;
   background-color: rgba(200, 10, 10, 0);
-  justify-content: end;
   margin: 0 10px;
-  padding-top: 27px;
   transition: opacity 7s ease-in-out;
 }
 
