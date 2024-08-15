@@ -57,7 +57,7 @@ border-radius: 10px;
     flex-direction: column;
     background: rgba(0, 0, 0, 0.8);
     color: white;
-    opacity: 0;
+    opacity: 1;
     transition:  opacity 0.3 ease;
 }
 
@@ -161,7 +161,7 @@ border-radius: 10px;
     
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1020px) {
     .container-series {
         width: 95%;
         background-color: black;
@@ -174,7 +174,7 @@ border-radius: 10px;
     }
     
     .series-list {
-        width: 55%;
+        width: 80%;
         padding: 5px 0;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -206,9 +206,7 @@ border-radius: 10px;
     }
     
     .series-title {
-        font-size: 18px;
-        margin: 5px 10px;
-        color: #5acbff;
+        font-size: 17px;
     }
     .series-year-details{
         font-size: 13px;
@@ -216,7 +214,12 @@ border-radius: 10px;
     }
     
     .series-overview {
-        font-size: 14px;
+        font-size: 11px;
 
+    }
+}
+@media (min-width: 1400px){
+    .series-list {
+        width: 55%;
     }
 }
