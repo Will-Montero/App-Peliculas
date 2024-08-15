@@ -7,9 +7,8 @@
 }
 
 .header-series {
-    padding: 10px;
     color: #5acbff;
-    font-size: 10px;
+    font-size: 13px;
 }
 
 .series-list {
@@ -99,6 +98,11 @@ border-radius: 10px;
         color: white;
         margin: 0 auto;
     }
+    .header-series {
+        color: #5acbff;
+        font-size: 14px;
+        padding-left: 8vw;
+    }
 
     .series-list {
         width: 85%;
@@ -169,13 +173,12 @@ border-radius: 10px;
     }
     
     .header-series {
-        padding: 5px 330px;
-        
+        padding: 0px 10vw;
+        font-size: 15px;
     }
     
     .series-list {
         width: 80%;
-        padding: 5px 0;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 15px;
@@ -219,6 +222,10 @@ border-radius: 10px;
     }
 }
 @media (min-width: 1400px){
+    .header-series {
+        padding: 0px 22vw;
+        font-size: 15px;
+    }
     .series-list {
         width: 55%;
     }

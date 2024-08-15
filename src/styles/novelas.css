@@ -3,7 +3,7 @@
   margin: 0 auto;
 }
 .novela-titulo {
-  font-size: 20px;
+  font-size: 25px;
   color: #5acbff;
 }
 .novela-list {
@@ -57,8 +57,8 @@
 
 @media (min-width: 800px) {
   .novela-titulo {
-    padding-left: 100px ;
-    font-size: 20px;
+    padding-left: 5vh;
+    font-size: 28px;
     color: #5acbff;
   }
   .novela-list {
@@ -85,6 +85,10 @@
   }
 }
 @media (min-width: 1050px) {
+  .novela-titulo {
+    font-size: 35px;
+    color: #5acbff;
+  }
     .novela-list {
       margin: 0 auto;
       background-color: #010405;
