@@ -94,7 +94,7 @@
 }
 @media (min-width: 1020px) {
     .container-novelas {
-      width: 95%;
+      width: 100%;
       margin: 0 auto;
     }
     .novela-titulo {
@@ -105,32 +105,21 @@
     .novela-list {
       margin: 0 auto;
       background-color: #010405;
-      width: 60%;
+      width: 90%;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 10px;
     }
     .novela-card {
       width: 100%;
       height: 40vh;
-      position: relative;
-      overflow: hidden;
       border-radius: 10px;
     }
     .novela-poster {
       margin: 0 auto;
-      border-radius: 10px;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      position: relative;
-      justify-content: center;
-      transition: opacity 0.4 ease-in-out;
     }
     .novela-titulo-details {
-      font-size: 18px;
-      margin: 10px 10px;
-      color: #5acbff;
+      font-size: 19px;
     }
     .novela-year-details {
       font-size: 12px;
@@ -138,10 +127,9 @@
       color: #ddd;
     }
     .novela-overview {
-      font-size: 12px;
+      font-size: 13px;
       color: #ccc;
       margin-top: 15px;
-      padding: 5px 15px;
       letter-spacing: 0.9px;
     }
   }
