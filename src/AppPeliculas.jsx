@@ -55,7 +55,7 @@ export const AppPeliculas = () => {
     <>
     <div className="container">
       <header  className="header-peliculas">
-        {!isSearching && <h1 className="title">PelisFree</h1>}
+        {!isSearching && <h1 className="title-pelis">PelisFree</h1>}
         {isSearching ?
          /* <form onSubmit={handleSubmit} className="search-form"> */
        
