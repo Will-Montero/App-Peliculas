@@ -13,24 +13,27 @@
   margin: 0 5px;
   display: flex;
   justify-content: space-evenly;
-  transition: all 5s ease-in-out;
 }
+
 .header-content {
   width: 100%;
   display: flex;
+  align-items: center;
+  transition: all 7s ease-in-out;
 }
 
 .title-pelis {
   width: 80%;
   filter: drop-shadow(0.5px 0.8px 1px #0530bd);
-  transition: opacity 5s ease-in-out;
+  transition: opacity 7s ease-in-out;
   opacity: 1;
 }
 
 .form-buscar {
   margin: 0 auto;
   width: 100%;
-  transition: opacity 5s ease-in-out;
+  transition: all 7s ease-in-out;
+  opacity: 0;
 }
 
 .search-form {
@@ -52,6 +55,7 @@
   margin-top: 25px;
   height: 5vh;
   align-content: center;
+  transition: width 7s ease-in-out, opacity 3s ease-in-out;
 }
 
 .exit-button {
@@ -64,6 +68,7 @@
   justify-content: end;
   margin: 0 10px;
   padding-top: 27px;
+  transition: opacity 7s ease-in-out;
 }
 
 .search-button {
@@ -73,8 +78,18 @@
   margin-top: 20px;
   justify-content: end;
   height: 5vh;
-  transition: opacity 5s ease-in-out;
+  transition: all 3s ease-in-out;
 }
+
+/* Animaciones visibles durante la búsqueda */
+.searching .title-pelis {
+  opacity: 0;
+}
+
+.searching .form-buscar {
+  opacity: 1;
+}
+
 
 .movie-list {
   width: 100%;
