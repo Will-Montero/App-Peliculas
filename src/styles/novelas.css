@@ -19,10 +19,10 @@
   width: 100%;
   display: flex;
   height: 100%;
-  filter: drop-shadow(0 4px 6px rgba(0, 149, 255, 0.597));
+  background-color: #010405;
 }
 .novela-card:hover {
-  filter: drop-shadow(0 4px 6px rgba(0, 149, 255, 0.597));
+  filter: drop-shadow(0 0px 1px rgb(3, 120, 236));
 }
 .novela-poster {
   margin: 0 auto;
@@ -56,10 +56,6 @@
 }
 
 @media (min-width: 800px) {
-  .container-novelas {
-    width: 100%;
-    margin: 0 auto;
-  }
   .novela-titulo {
     padding-left: 100px ;
     font-size: 20px;
@@ -72,11 +68,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-  }
-  .novela-card {
-    width: 100%;
-    height: 40vh;
-    border-radius: 10px;
   }
  
   .novela-titulo-details {
@@ -93,44 +84,23 @@
     letter-spacing: 0.9px;
   }
 }
-@media (min-width: 1020px) {
-    .container-novelas {
-      width: 100%;
-      margin: 0 auto;
-    }
-    .novela-titulo {
-      padding-left: 300px;
-      font-size: 20px;
-      color: #5acbff;
-    }
+@media (min-width: 1050px) {
     .novela-list {
       margin: 0 auto;
       background-color: #010405;
       width: 90%;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      gap: 10px;
     }
-    .novela-card {
-      width: 100%;
-      height: 40vh;
-      border-radius: 10px;
-    }
-    .novela-poster {
-      margin: 0 auto;
-    }
+
     .novela-titulo-details {
       font-size: 19px;
     }
     .novela-year-details {
       font-size: 12px;
       margin: 5px 10px;
-      color: #ddd;
     }
     .novela-overview {
       font-size: 13px;
-      color: #ccc;
-      margin-top: 15px;
-      letter-spacing: 0.9px;
     }
   }
