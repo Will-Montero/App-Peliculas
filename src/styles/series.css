@@ -163,7 +163,7 @@ border-radius: 10px;
 
 @media (min-width: 1024px) {
     .container-series {
-        width: 100%;
+        width: 95%;
         background-color: black;
         color: white;
     }
