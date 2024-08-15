@@ -7,11 +7,12 @@
 }
 .header-peliculas {
   font-family: serif;
-  color: #8dc0f2;
+  color: rgb(231, 236, 243);
   width: 100%;
   margin: 0 10px;
   display: flex;
   justify-content: space-evenly;
+  filter: drop-shadow( 0.5px 0.8px 1px  #0530bd);
 }
 
 .search-form {
