@@ -79,18 +79,18 @@ export const AppPeliculas = () => {
           {!isSearching && (
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="#">
+                <a className="nav-link" aria-current="page">
                   Inicio
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link">
                   Series
                 </a>
               </li>
-              <li className="nav-item dropdown">
+              <li className="nav-item">
                 <a
-                  className="nav-link dropdown-toggle"
+                  className="nav-link dropdown"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -100,12 +100,12 @@ export const AppPeliculas = () => {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <a className="dropdown-item">
                       Acción
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <a className="dropdown-item">
                       Otra acción
                     </a>
                   </li>
@@ -113,7 +113,7 @@ export const AppPeliculas = () => {
                     <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <a className="dropdown-item">
                       Algo más aquí
                     </a>
                   </li>

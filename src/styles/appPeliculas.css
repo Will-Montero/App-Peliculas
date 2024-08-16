@@ -17,6 +17,7 @@
   justify-items: center;
   justify-content: center;
 }
+/* title of header*/
 .navbar-brand{
   color: rgb(18, 158, 223);
   font-size: 35px;
@@ -346,17 +347,22 @@
   .navbar-collapse {
     margin-top: 0vh;
     padding-left: 50px;
-    background-color: #0a43a0;
-    z-index: 0;
+    background-color: #083463;
+    z-index: 1;
     color: rgb(18, 158, 223);
   }
-  
+  .dropdown-menu{
+    z-index: 5000;
+    background-color: rgb(255, 255, 255);
+
+  }
   .nav-link {
     color: rgb(18, 158, 223);
     font-size: 22px;
   }
   .dropdown-item{
     color: rgb(18, 158, 223);
+
   }
   .form-container{
     width: 100%;
