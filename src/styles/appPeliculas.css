@@ -344,11 +344,15 @@
     filter: drop-shadow(0.5px 0.8px 1px #0530bd);
   }
   .navbar-collapse {
+    z-index: 0;
     margin-top: 0vh;
     background-color: #083463;
     color: rgb(18, 158, 223);
   }
-  
+  .container-fluid {
+    position: relative;
+    flex-wrap: nowrap;
+  }
   
   .dropdown-menu {
     z-index: 5000;
