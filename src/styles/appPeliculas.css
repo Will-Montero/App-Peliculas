@@ -1,18 +1,16 @@
 .container {
   width: 100%;
-  height: 10vh;
   margin: 0 auto;
   color: rgb(18, 158, 223);
   letter-spacing: 0.6px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont;
-  background-color: #ccc;
+  background-color: #000000;
 }
 
 .header-peliculas {
   font-family: serif;
   color: rgb(18, 158, 223);
   width: 100%;
-  z-index: 10;
   height: 100%;
   justify-items: center;
   justify-content: center;
@@ -26,25 +24,67 @@
   color: rgb(255, 255, 255);
 }
 
-.container-fluid {
-  position: absolute;
-  flex-wrap: nowrap;
-}
-
 .header-content {
+  position: relative;
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   transition: all 7s ease-in-out;
-  padding: 5px;
 }
 
+/**/
+
+.container-fluid {
+  position: relative;
+  flex-wrap: nowrap;
+}
+
+.dropdown-menu {
+  z-index: 5000;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+}
+
+
+.nav-link {
+  color: rgb(18, 158, 223);
+  font-size: 22px;
+  margin: 0 auto;
+  
+}
+.nav-link:hover {
+  color: rgb(255, 255, 255);
+}
 .navbar {
   width: 100%;
   height: 100%;
 }
+
+.navbar-nav {
+  margin: 0 auto;
+}
+.dropdown-item {
+  background-color: black;
+  color: rgb(18, 158, 223);
+}
+.dropdown-item:hover {
+  color: rgb(255, 255, 255);
+  background-color: black;
+}
+/**/
+.navbar-toggler{
+  background-color: rgb(18, 158, 223);
+}
+.navbar-collapse {
+  width: 100%;
+  z-index: 10;
+  background-color: #1a1a1a;
+  color: aliceblue;
+}
+
+
 
 .title-pelis {
   width: 80%;
@@ -53,26 +93,16 @@
   opacity: 1;
   height: 4vh;
 }
-.navbar-collapse {
-  margin-top: 8vh;
-  width: 100%;
-  padding: 5px;
-  z-index: 10;
-  background-color: #1a1a1a;
-  color: aliceblue;
-}
 
 .form-container {
-  justify-content: center;
-  align-items: center;
-  justify-items: center;
+  margin-top: 10px;
   width: 100%;
   position: absolute;
   color: aliceblue;
 }
 
 .form-buscar {
-  margin: 0 auto;
+  height: auto;
   width: 100%;
   transition: all 7s ease-in-out;
   opacity: 0;
@@ -99,13 +129,14 @@
   font-size: 20px;
   background-color: rgba(200, 10, 10, 0);
   transition: opacity 7s ease-in-out;
+  padding-right: 23px;
 }
 
 .search-button {
+  position: static;
   background-color: #000000;
   border: none;
   font-size: 22px;
-  justify-content: end;
   transition: all 7s ease-in-out;
 }
 
@@ -210,23 +241,96 @@
 @media (min-width: 600px) {
   .container {
     width: 100%;
-    height: 10vh;
     margin: 0 auto;
     color: white;
     letter-spacing: 0.6px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont;
   }
+  .header-peliculas {
+    font-family: serif;
+    color: rgb(18, 158, 223);
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+    justify-content: center;
+    font-size: 25px;
+  }
+
+  .header-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all 7s ease-in-out;
+    padding: 5px;
+    font-size: 20px;
+  }
+
+  .title-pelis {
+    width: 80%;
+    filter: drop-shadow(0.5px 0.8px 1px #0530bd);
+  }
+  .navbar-collapse {
+    z-index: 1;
+    background-color: #083463;
+    color: rgb(18, 158, 223);
+  }
+  .container-fluid {
+    position: relative;
+    flex-wrap: nowrap;
+  }
+  
+  .dropdown-menu {
+    z-index: 5000;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+  }
+
+
+  .nav-link {
+    color: rgb(18, 158, 223);
+    font-size: 22px;
+    margin: 0 auto;
+  }
+  .nav-link:hover {
+    color: rgb(255, 255, 255);
+  }
+  .navbar-nav {
+    margin: 0 auto;
+  }
+  .dropdown-item {
+    background-color: black;
+    color: rgb(18, 158, 223);
+  }
+  .dropdown-item:hover {
+    color: rgb(255, 255, 255);
+    background-color: black;
+  }
+  .form-container {
+    width: 100%;
+  }
+
   .form-buscar {
     margin: 0 auto;
-    margin-top: 13px;
-    width: 80%;
+    width: 100%;
     transition: all 7s ease-in-out;
     opacity: 0;
     display: flex;
-    align-items: first end;
     justify-content: space-evenly;
   }
 
+  .search-input {
+    width: 75%;
+    background-color: rgb(0, 0, 0);
+    color: #dcd5d5;
+    border-top: #dcd5d5;
+    border-radius: 30px;
+    font-size: 14px;
+    padding-left: 15px;
+    height: 5vh;
+    transition: width 7s ease-in-out, opacity 3s ease-in-out;
+  }
   .movie-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -310,27 +414,24 @@
 @media (min-width: 1020px) {
   .container {
     width: 100%;
-    height: 10vh;
     margin: 0 auto;
     color: white;
     letter-spacing: 0.6px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont;
-    background-color: #083463;
+    background-color: #000000;
   }
 
   .header-peliculas {
     font-family: serif;
     color: rgb(18, 158, 223);
-    width: 100%;
-    height: 100%;
+   
+    padding: 0 300px;
     justify-items: center;
     justify-content: center;
     font-size: 25px;
   }
 
   .header-content {
-    width: 100%;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -339,12 +440,9 @@
     font-size: 20px;
   }
 
-  .title-pelis {
-    width: 80%;
-    filter: drop-shadow(0.5px 0.8px 1px #0530bd);
-  }
+
   .navbar-collapse {
-    z-index: 0;
+    z-index: 50;
     margin-top: 0vh;
     background-color: #083463;
     color: rgb(18, 158, 223);
@@ -415,7 +513,7 @@
   }
 
   .search-button {
-    background-color: #083463;
+    background-color: #000000;
     border: none;
     font-size: 22px;
     justify-content: end;
