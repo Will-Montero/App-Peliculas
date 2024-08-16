@@ -69,45 +69,17 @@ export const AppPeliculas = () => {
     </button>}
       
         {/* Título del lado izquierdo */}
-        {!isSearching && <a className="navbar-brand" href="#">PelisFree</a>}
+        {!isSearching && <a className="navbar-brand">PelisFree</a>}
 
         {/* Botón para expandir el menú en móviles */}
         
         
         {/* Elementos del navbar */}
-       
-         {/* Formulario de búsqueda */}
-          <div className="form-container d-flex   ms-auto" >
-            {isSearching && (
-              <form onSubmit={handleSubmit} className="form-buscar">
-                <input
-                  type="text"
-                  placeholder="Enter movie"
-                  value={busqueda}
-                  onChange={handleOnChange}
-                  className="search-input"
-                />
-                <button
-                  type="button"
-                  className="exit-button"
-                  onClick={handleExitClick}
-                >
-                  ❌
-                </button>
-              </form>
-            )}
-          </div>
-
-           
-          {!isSearching && <button className="search-button" onClick={handleSearchClick}>
-                🔍
-              </button>}
-      </div>
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
           {!isSearching && (
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <a className="nav-link" aria-current="page" href="#">
                   Inicio
                 </a>
               </li>
@@ -150,6 +122,34 @@ export const AppPeliculas = () => {
             </ul>
           )}
         </div>
+         {/* Formulario de búsqueda */}
+          <div className="form-container d-flex   ms-auto" >
+            {isSearching && (
+              <form onSubmit={handleSubmit} className="form-buscar">
+                <input
+                  type="text"
+                  placeholder="Enter movie"
+                  value={busqueda}
+                  onChange={handleOnChange}
+                  className="search-input"
+                />
+                <button
+                  type="button"
+                  className="exit-button"
+                  onClick={handleExitClick}
+                >
+                  ❌
+                </button>
+              </form>
+            )}
+          </div>
+
+           
+          {!isSearching && <button className="search-button" onClick={handleSearchClick}>
+                🔍
+              </button>}
+      </div>
+     
     </nav>
   </div>
 </header>
