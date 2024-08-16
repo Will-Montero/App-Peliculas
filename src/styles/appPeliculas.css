@@ -18,15 +18,17 @@
   justify-content: center;
 }
 /* title of header*/
-.navbar-brand{
+.navbar-brand {
   color: rgb(18, 158, 223);
   font-size: 35px;
+}
+.navbar-brand:hover {
+  color: rgb(255, 255, 255);
 }
 
 .container-fluid {
   position: absolute;
   flex-wrap: nowrap;
-
 }
 
 .header-content {
@@ -42,7 +44,6 @@
 .navbar {
   width: 100%;
   height: 100%;
- 
 }
 
 .title-pelis {
@@ -61,7 +62,7 @@
   color: aliceblue;
 }
 
-.form-container{
+.form-container {
   justify-content: center;
   align-items: center;
   justify-items: center;
@@ -79,7 +80,6 @@
   justify-content: space-evenly;
   color: aliceblue;
 }
-
 
 .search-input {
   width: 75%;
@@ -117,7 +117,6 @@
 .searching .form-buscar {
   opacity: 1;
 }
-
 
 .movie-list {
   width: 100%;
@@ -227,7 +226,7 @@
     align-items: first end;
     justify-content: space-evenly;
   }
-  
+
   .movie-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -308,7 +307,7 @@
     margin-bottom: 8px;
   }
 }
-@media (min-width: 1020px){
+@media (min-width: 1020px) {
   .container {
     width: 100%;
     height: 10vh;
@@ -318,7 +317,7 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont;
     background-color: #083463;
   }
-  
+
   .header-peliculas {
     font-family: serif;
     color: rgb(18, 158, 223);
@@ -328,7 +327,7 @@
     justify-content: center;
     font-size: 25px;
   }
-  
+
   .header-content {
     width: 100%;
     height: 100%;
@@ -346,28 +345,37 @@
   }
   .navbar-collapse {
     margin-top: 0vh;
-    padding-left: 50px;
     background-color: #083463;
-    z-index: 1;
     color: rgb(18, 158, 223);
   }
-  .dropdown-menu{
+  
+  
+  .dropdown-menu {
     z-index: 5000;
-    background-color: rgb(255, 255, 255);
-
+    background-color: rgb(241, 215, 215);
+    width: 100%;
   }
+
+
   .nav-link {
     color: rgb(18, 158, 223);
     font-size: 22px;
+    margin: 0 auto;
+    padding-left: 25vw;
   }
-  .dropdown-item{
+  .nav-link:hover {
+    color: rgb(255, 255, 255);
+  }
+  .navbar-nav {
+    margin: 0 auto;
+  }
+  .dropdown-item {
     color: rgb(18, 158, 223);
-
   }
-  .form-container{
+  .form-container {
     width: 100%;
   }
-  
+
   .form-buscar {
     margin: 0 auto;
     width: 100%;
@@ -376,8 +384,7 @@
     display: flex;
     justify-content: space-evenly;
   }
-  
-  
+
   .search-input {
     width: 75%;
     background-color: rgb(0, 0, 0);
@@ -389,7 +396,7 @@
     height: 5vh;
     transition: width 7s ease-in-out, opacity 3s ease-in-out;
   }
-  
+
   .exit-button {
     border: none;
     color: #4b0505;
@@ -397,7 +404,7 @@
     background-color: rgba(200, 10, 10, 0);
     transition: opacity 7s ease-in-out;
   }
-  
+
   .search-button {
     background-color: #083463;
     border: none;
