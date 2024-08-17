@@ -91,6 +91,11 @@ export const AppPeliculas = () => {
                         </a>
                       </li>
                       <li className="nav-item">
+                        <a className="nav-link" href="#">
+                          Novelas
+                        </a>
+                      </li>
+                      <li className="nav-item">
                         <a
                           className="nav-link"
                           href="#"

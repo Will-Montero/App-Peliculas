@@ -70,7 +70,7 @@
 }
 .navbar-collapse {
   position: absolute;
-  margin-top: 230px;
+  margin-top: 280px;
   width: 95%;
   z-index: 10;
   padding: 8px;
@@ -426,6 +426,9 @@
     font-size: 35px;
     padding-left: 2vw;
   }
+  .navbar-brand:hover {
+    color: #000000;
+  }
   .navbar-toggler {
     background-color: rgb(18, 158, 223);
   }
@@ -453,7 +456,7 @@
     padding-left: 2vw;
   }
   .nav-link:hover {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
   }
   .navbar-nav {
     width: 100%;
