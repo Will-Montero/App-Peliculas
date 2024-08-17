@@ -1,4 +1,4 @@
-import { AppPeliculas } from "./AppPeliculas"
+import { Header } from "./Header"
 import { Footer } from "./Footer"
 import { Home } from "./Home"
 import { Novelas } from "./Novelas"
@@ -9,7 +9,7 @@ export const App = () => {
   return (
     <>
     <div className="imagen-fondo">
-    <AppPeliculas></AppPeliculas>
+    <Header></Header>
     <Home></Home>
     <Series></Series>
     <Novelas></Novelas>
