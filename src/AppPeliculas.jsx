@@ -96,9 +96,9 @@ export const AppPeliculas = () => {
                           Series
                         </a>
                       </li>
-                      <li className="nav-item dropdown">
+                      <li className="nav-item">
                         <a
-                          className="nav-link dropdown-toggle"
+                          className="nav-link"
                           href="#"
                           role="button"
                           data-bs-toggle="dropdown"
