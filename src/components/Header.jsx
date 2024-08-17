@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { fetchData } from "../hook/fetchData";
+import { NavLink } from "react-router-dom";
+
 
 import "../styles/header.css";
 
@@ -38,7 +40,7 @@ export const Header = () => {
                 )}
 
                 {/* Título del lado izquierdo */}
-                {!isSearching && <a className="navbar-brand">PelisFree</a>}
+                {!isSearching && <NavLink to='/' className="navbar-brand">PelisFree</NavLink>}
                 {/* Botón para expandir el menú en móviles */}
 
                 {/* Elementos del navbar */}
@@ -49,19 +51,19 @@ export const Header = () => {
                   >
                     <ul className="navbar-nav  mb-2 mb-lg-0">
                       <li className="nav-item">
-                        <a className="nav-link" href="#">
+                        <NavLink to='/' className="nav-link" href="#">
                           Inicio
-                        </a>
+                        </NavLink>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="#">
+                        <NavLink to='/series' className="nav-link" href="#">
                           Series
-                        </a>
+                        </NavLink>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="#">
+                        <NavLink to='/novelas' className="nav-link" href="#">
                           Novelas
-                        </a>
+                        </NavLink>
                       </li>
                       <li className="nav-item">
                         <a
