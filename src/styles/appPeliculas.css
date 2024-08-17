@@ -382,7 +382,7 @@
   .container {
     width: 100%;
     margin: 0 auto;
-    color: white;
+    color: rgb(255, 255, 255);
     letter-spacing: 0.6px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont;
     background-color: #000000;
@@ -407,7 +407,7 @@
  
   .navbar {
     width: 100%;
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
     justify-content: center;
     align-content: space-around;
     margin: 0 auto;
@@ -421,6 +421,11 @@
     width: 100%;
 
   }
+  .navbar-brand {
+    color: rgb(18, 158, 223);
+    font-size: 35px;
+    padding-left: 2vw;
+  }
   .navbar-toggler {
     background-color: rgb(18, 158, 223);
   }
@@ -430,12 +435,12 @@
       width: 53%;
       z-index: 1;
       padding: 8px;
-      background-color: #1a1a1a;
+      background-color: #ffffff;
       color: aliceblue;
     }
 
   .dropdown-menu {
-    position: absolute;
+    margin-top: 10vh;
     z-index: 20;
     background-color: rgb(0, 0, 0);
     width: 100%;
@@ -496,4 +501,5 @@
     justify-content: end;
   
   }
+
 }
