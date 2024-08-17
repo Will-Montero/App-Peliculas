@@ -151,7 +151,6 @@ export const AppPeliculas = () => {
             </nav>
           </div>
         </header>
-
         <div className="movie-list">
           {dataPeliculas.map((pelicula) => (
             <div key={pelicula.id} className="movie-card">
