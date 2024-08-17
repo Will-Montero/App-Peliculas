@@ -417,16 +417,16 @@
     background-color: rgb(18, 158, 223);
   }
   .navbar {
-    width: 100%;
+    width: 90%;
     background-color: aliceblue;
   }
 
   .container-fluid {
-    position: relative;
-    flex-wrap: nowrap;
-    width: 40%;
+   display: flex;
+    width: 100%;
   }
   .navbar-collapse {
+    z-index: 5;
     margin-top: 0vh;
     padding: 0;
     background-color: #083463;
@@ -466,13 +466,12 @@
 
   .form-buscar {
     margin: 0 auto;
-    width: 100%;
-    transition: all 7s ease-in-out;
+    width: 96%;
     opacity: 0;
   }
 
   .search-input {
-    width: 100%;
+    width: 92%;
     background-color: rgb(0, 0, 0);
     color: #dcd5d5;
     border-top: #dcd5d5;
@@ -480,7 +479,6 @@
     font-size: 14px;
     padding-left: 15px;
     height: 5vh;
-    transition: width 7s ease-in-out, opacity 3s ease-in-out;
   }
 
   .exit-button {
@@ -494,7 +492,7 @@
     background-color: #000000;
     border: none;
     font-size: 22px;
-    position: absolute;
-    margin: 500px;
+    justify-content: end;
+  
   }
 }
