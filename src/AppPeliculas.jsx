@@ -71,7 +71,6 @@ export const AppPeliculas = () => {
 
                 {/* Título del lado izquierdo */}
                 {!isSearching && <a className="navbar-brand">PelisFree</a>}
-
                 {/* Botón para expandir el menú en móviles */}
 
                 {/* Elementos del navbar */}
@@ -80,7 +79,7 @@ export const AppPeliculas = () => {
                     className="collapse navbar-collapse"
                     id="navbarSupportedContent"
                   >
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul className="navbar-nav  mb-2 mb-lg-0">
                       <li className="nav-item">
                         <a className="nav-link" href="#">
                           Inicio
@@ -120,13 +119,12 @@ export const AppPeliculas = () => {
                     </ul>
                   </div>
                 )}
-
+                
                 {!isSearching && (
                   <button className="search-button" onClick={handleSearchClick}>
                     🔍
                   </button>
                 )}
-
                 {/* Formulario de búsqueda */}
                 <div className="form-container d-flex   ms-auto">
                   {isSearching && (
@@ -147,6 +145,7 @@ export const AppPeliculas = () => {
                       </button>
                     </form>
                   )}
+                   
                 </div>
               </div>
             </nav>
