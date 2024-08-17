@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { fetchData } from "./hook/fetchData";
+import { fetchData } from "../hook/fetchData";
 
-import "./styles/header.css";
+import "../styles/header.css";
 
 export const Header = () => {
   const {  handleOnChange,  handleSubmit, busqueda, setBusqueda } =

@@ -1,14 +1,14 @@
-import { Header } from "./Header"
-import { Footer } from "./Footer"
-import { Home } from "./Home"
-import { Novelas } from "./Novelas"
-import { Series } from "./Series"
+import { Header } from "./components/Header"
+import { Footer } from "./components/Footer"
+import { Home } from "./pages/Home"
+import { Novelas } from "./pages/Novelas"
+import { Series } from "./pages/Series"
 import './styles/App.css'
 
 export const App = () => {
   return (
     <>
-    <div className="imagen-fondo">
+    <div>
     <Header></Header>
     <Home></Home>
     <Series></Series>
