@@ -34,12 +34,6 @@
   height: 8vh;
 }
 
-.dropdown-menu {
-  z-index: 50;
-  background-color: rgb(0, 0, 0);
-  width: 100%;
-}
-
 .nav-link {
   color: rgb(18, 158, 223);
   font-size: 22px;
@@ -69,13 +63,18 @@
   background-color: rgb(18, 158, 223);
 }
 .navbar-collapse {
-  position: absolute;
-  margin-top: 280px;
+  position: fixed;
   width: 95%;
-  z-index: 10;
+  margin-top: 280px;
+  z-index: 1000;
   padding: 8px;
   background-color: #1a1a1a;
   color: aliceblue;
+}
+.dropdown-menu {
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: 100%;
 }
 
 .form-container {

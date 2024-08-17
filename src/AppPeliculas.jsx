@@ -119,6 +119,11 @@ export const AppPeliculas = () => {
                               Algo más aquí
                             </a>
                           </li>
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              Algo más aquí
+                            </a>
+                          </li>
                         </ul>
                       </li>
                     </ul>
