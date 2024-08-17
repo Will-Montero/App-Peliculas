@@ -3,7 +3,7 @@ import { Footer } from "./components/Footer"
 import { Home } from "./pages/Home"
 import { Novelas } from "./pages/Novelas"
 import { Series } from "./pages/Series"
-import { Router, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import './styles/App.css'
 
 export const App = () => {
@@ -11,16 +11,16 @@ export const App = () => {
     <>
   
     <Header></Header>
-    <Router>
+    <Routes>
       <Route path="/" element={<Home></Home>}></Route>
       <Route path="/series" element={<Series></Series>}></Route>
-      <Route path="/" element={<Novelas></Novelas>}></Route>
+      <Route path="/novelas" element={<Novelas></Novelas>}></Route>
       <Route path="/*" element={<Navigate to='/'/>}></Route>
+    
+    </Routes>
     <Home></Home>
     <Series></Series>
     <Novelas></Novelas>
-    </Router>
-   
     <Footer></Footer>
   
     </>
