@@ -198,7 +198,7 @@ export const Home = () => {
  */
 
 import { useEffect, useState } from "react";
-import "./styles/home.css";
+import "../styles/home.css";
 
 export const Home = () => {
   const URL = "https://api.themoviedb.org/3/movie/popular";

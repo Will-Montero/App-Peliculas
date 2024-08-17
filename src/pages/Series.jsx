@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import './styles/series.css';
+import '../styles/series.css';
 
 export const Series = () => {
   const URL = "https://api.themoviedb.org/3/tv/popular";

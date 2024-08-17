@@ -1,5 +1,5 @@
 import { useState, useEffect} from 'react'
-import './styles/novelas.css'
+import '../styles/novelas.css'
 
 export const Novelas = () => {
 
