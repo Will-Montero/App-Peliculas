@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { fetchData } from "../hook/fetchData";
 import { NavLink } from "react-router-dom";
-
-
 import "../styles/header.css";
+
 
 export const Header = () => {
   const {  handleOnChange,  handleSubmit, busqueda, setBusqueda } =
@@ -130,6 +129,7 @@ export const Header = () => {
             </nav>
           </div>
         </header>
+
       </div>
     </>
   );
