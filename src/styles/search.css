@@ -12,13 +12,13 @@
     margin: 0 auto;
     position: relative;
     overflow: hidden;
-    height: 30vh;
-    width: 30vw;
+    height: 23vh;
+    width: 32vw;
   }
   
   .movie-poster {
     height: 100%;
-    width: 100%;
+    width: 98%;
     transition: opacity 0.8s ease-in-out;
   }
   
