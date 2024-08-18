@@ -199,6 +199,8 @@ export const Home = () => {
 
 import { useEffect, useState } from "react";
 import "../styles/home.css";
+import { Series } from "./Series";
+import { Novelas } from './Novelas'
 
 export const Home = () => {
   const URL = "https://api.themoviedb.org/3/movie/popular";
@@ -261,6 +263,8 @@ export const Home = () => {
           </div>
         ))}
       </div>
+      <Series></Series>
+      <Novelas></Novelas>
     </div>
   );
 };

@@ -14,16 +14,14 @@ export const App = () => {
   
     <SearchProvider>
     <Header></Header>
+    <Search></Search>
     <Routes>
       <Route path="/" element={<Home></Home>}></Route>
       <Route path="/series" element={<Series></Series>}></Route>
       <Route path="/novelas" element={<Novelas></Novelas>}></Route>
       <Route path="/*" element={<Navigate to='/'/>}></Route>
     </Routes>
-    <Search></Search>
-    <Home></Home>
-    <Series></Series>
-    <Novelas></Novelas>
+    
     <Footer></Footer>
     </SearchProvider>
   
