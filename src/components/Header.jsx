@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useContext } from "react";
+import { useContext} from "react";
 import { SearchContext } from "../context/pelicula/SearchContext";
 
 import { NavLink } from "react-router-dom";
@@ -8,6 +8,7 @@ import "../styles/header.css";
 
 export const Header = () => {
   const {  handleOnChange,  handleSubmit, busqueda, setBusqueda } = useContext(SearchContext);
+
 
   const [isSearching, setIsSearching] = useState(false);
   const handleSearchClick = () => {
@@ -110,6 +111,7 @@ export const Header = () => {
                   {isSearching && (
                     <form onSubmit={handleSubmit} className="form-buscar">
                       <input
+                      ref={focusRef}
                         type="text"
                         placeholder="Enter movie"
                         value={busqueda}
