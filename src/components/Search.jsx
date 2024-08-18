@@ -1,7 +1,7 @@
 import { fetchData } from "../hook/fetchData"
 import '../styles/search.css'
 
-export const CardSearch = () => {
+export const Search = () => {
 
     const {dataPeliculas} = fetchData()
 
