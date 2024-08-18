@@ -111,7 +111,7 @@ export const Header = () => {
                   {isSearching && (
                     <form onSubmit={handleSubmit} className="form-buscar">
                       <input
-                      ref={focusRef}
+                      
                         type="text"
                         placeholder="Enter movie"
                         value={busqueda}
