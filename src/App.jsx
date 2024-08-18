@@ -6,11 +6,13 @@ import { Series } from "./pages/Series"
 import { Search } from "./components/Search"
 import { Routes, Route, Navigate } from "react-router-dom";
 import './styles/App.css'
+import { SearchProvider } from "./context/pelicula/SearchProvider"
 
 export const App = () => {
   return (
     <>
   
+    <SearchProvider>
     <Header></Header>
     <Routes>
       <Route path="/" element={<Home></Home>}></Route>
@@ -23,6 +25,7 @@ export const App = () => {
     <Series></Series>
     <Novelas></Novelas>
     <Footer></Footer>
+    </SearchProvider>
   
     </>
   )

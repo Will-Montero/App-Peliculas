@@ -1,9 +1,9 @@
-import { fetchData } from "../hook/fetchData"
 import '../styles/search.css'
-
+import { useContext } from 'react';
+import { SearchContext } from '../context/pelicula/SearchContext';
 export const Search = () => {
 
-    const {dataPeliculas} = fetchData()
+    const {dataPeliculas} = useContext(SearchContext)
 
     const limitarPalabras = (texto, maxPalabras) => {
         const palabras = texto.split(" ");

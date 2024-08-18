@@ -1,12 +1,13 @@
 import { useState } from "react";
-import { fetchData } from "../hook/fetchData";
+import { useContext } from "react";
+import { SearchContext } from "../context/pelicula/SearchContext";
+
 import { NavLink } from "react-router-dom";
 import "../styles/header.css";
 
 
 export const Header = () => {
-  const {  handleOnChange,  handleSubmit, busqueda, setBusqueda } =
-    fetchData();
+  const {  handleOnChange,  handleSubmit, busqueda, setBusqueda } = useContext(SearchContext);
 
   const [isSearching, setIsSearching] = useState(false);
   const handleSearchClick = () => {
