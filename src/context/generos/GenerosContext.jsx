@@ -1,3 +1,3 @@
 import { createContext } from "react";
 
-export const GenerosContext = createContext
+export const GenerosContext = createContext()

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { GenerosContext } from "./generosContext";
+import { GenerosContext } from '../generos/GenerosContext'
 
 export const GenerosProvider = ({ children }) => {
 

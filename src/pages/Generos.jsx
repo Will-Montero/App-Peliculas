@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { GenerosContext } from "../context/GenerosContext";
+import { GenerosContext } from "../context/generos/GenerosContext";
 import '../styles/generos.css'
 
-export const GenerosPage = ({ genero }) => {
+export const Generos = ({ genero }) => {
   const { generos } = useContext(GenerosContext);
 
   return (
