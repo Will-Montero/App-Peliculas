@@ -24,6 +24,7 @@ export const GenerosProvider = ({ children }) => {
             const response = await  fetch (`${URLGENEROS}?api_key=${API_KEY}&with_genres=${generoIds[genero]}`)
             const data = await response.json()
             return data.results;
+           
         } catch (error) {
             console.error(error)
         }
