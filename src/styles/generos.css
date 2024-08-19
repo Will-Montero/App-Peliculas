@@ -194,6 +194,9 @@
         text-decoration: none;
         transition: background-color 0.3s ease;
       }
+      .play-button:hover {
+        background-color: #0056b3;
+      }
  }  
 
  @media(min-width: 1020px) {
@@ -230,5 +233,9 @@
         text-align: center;
         text-decoration: none;
         transition: background-color 0.3s ease;
+      }
+      
+      .play-button:hover {
+        background-color: #0056b3;
       }
  }

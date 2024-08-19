@@ -54,6 +54,22 @@
   margin: 10px;
   letter-spacing: 0.8px;
 }
+.play-button {
+  font-size: 8px;
+  display: inline-block;
+  padding: 2px 4px;
+  margin:  3px 5px;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.play-button:hover {
+  background-color: #0056b3;
+}
 
 @media (min-width: 800px) {
   .novela-titulo {
@@ -83,6 +99,21 @@
     margin-top: 15px;
     letter-spacing: 0.9px;
   }
+  .play-button {
+    font-size: 10px;
+    display: inline-block;
+    padding: 3px 6px;
+    margin:  3px 5px;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  .play-button:hover {
+    background-color: #0056b3;
+  }
 }
 @media (min-width: 1050px) {
   .novela-titulo {
@@ -106,5 +137,21 @@
     }
     .novela-overview {
       font-size: 13px;
+    }
+     
+    .play-button {
+      font-size: 12px;
+      display: inline-block;
+      padding: 5px 12px;
+      margin:  3px 5px;
+      color: #fff;
+      background-color: #007bff;
+      border-radius: 5px;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .play-button:hover {
+      background-color: #0056b3;
     }
   }
