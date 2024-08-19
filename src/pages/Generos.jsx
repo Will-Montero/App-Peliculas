@@ -15,7 +15,7 @@ export const Generos = ({ genero }) => {
 
   return (
     <div className="genero-container">
-      <h2 className="genero-titulo">{genero}</h2>
+       <h2 className="genero-titulo">{genero}</h2>
       <div className="genero-list">
         {generos[genero] ? (
           generos[genero].map((movie) => (
