@@ -194,6 +194,8 @@
   color: #5acbff;
 }
 
+
+
 /* Estilos para la lista de películas */
 .movie-list-home {
   width: 100%;
@@ -203,9 +205,20 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 5px;
 }
+.movie-info-home {
+  position: absolute;
+  padding: 0 2px;
+}
+
+.movie-year-home {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 1px;
+  font-size: 7px;
+  border-radius: 3px;
+}
 
 /* Estilos para cada tarjeta de película */
-.movie-card {
+.movie-card-home {
   width: 100%;
   margin: 0 auto;
   position: relative;
@@ -213,13 +226,14 @@
   height: 23vh;
 }
 
-.movie-poster {
+.movie-poster-home {
   height: 18vh;
   width: 100%;
   transition: opacity 0.3s ease-in-out;
+  object-fit: cover;
 }
 
-.movie-details {
+.movie-details-home {
   position: absolute;
   top: 0;
   left: 0;
@@ -228,50 +242,51 @@
   display: flex;
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.7);
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.3s ease;
 }
 
-.movie-card:hover .movie-info,
-.movie-card:hover .movie-details {
+.movie-card-home:hover .movie-info-home,
+.movie-card-home:hover .movie-details-home {
   opacity: 1;
 }
-.movie-poster {
+.movie-poster-home {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.movie-year{
+.movie-year-home{
   position: absolute;
   font-size: 11px;
   margin: 5px 1px;
   color: #ddd;
 }
 
-.movie-title {
-  font-size: 11px;
-  margin: 5px 10px;
+.movie-title-home {
+  font-size: 10px;
+  margin: 3px 5px;
   color: #5acbff;
 }
 
 
-.movie-year-details {
-  font-size: 9px;
-  margin: 5px 10px;
+.movie-year-details-home {
+  font-size: 8px;
+  margin: 3px 5px;
   color: #ddd;
 }
 
-.movie-overview {
-  font-size: 10;
+.movie-overview-home {
+  font-size: 7px;
   color: #ccc;
-  margin-top: 5px;
+  margin: 5px 5px;
+  height: 10vh;
 }
-.play-button {
+.play-button-home{
   font-size: 8px;
-  display: inline-block;
-  padding: 2px 4px;
-  margin:  3px 5px;
+  padding:2px 4px;
+  margin:  0 3px;
+  width: 14vw;
   color: #fff;
   background-color: #007bff;
   border-radius: 5px;
@@ -279,7 +294,7 @@
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
-.play-button:hover {
+.play-button-home:hover {
   background-color: #0056b3;
 }
 
@@ -296,7 +311,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
-  .movie-card {
+  .movie-card-home {
     position: relative;
     border-radius: 5px;
     overflow: hidden;
@@ -308,32 +323,32 @@
     margin: 5px 72px;
     font-size: 25px;
   }
-  .movie-year{
+  .movie-year-home{
     position: absolute;
     font-size: 11px;
     margin: 5px 5px;
     color: #ddd;
   }
   
-  .movie-title {
+  .movie-title-home {
     font-size: 13px;
     margin: 7px 10px;
     color: #5acbff;
   }
   
   
-  .movie-year-details {
+  .movie-year-details-home {
     font-size: 11px;
     margin: 5px 10px;
     color: #ddd;
   }
   
-  .movie-overview {
+  .movie-overview-home {
     font-size: 12;
     color: #ccc;
     margin-top: 5px;
   }
-  .play-button {
+  .play-button-home {
     font-size: 10px;
     display: inline-block;
     padding: 3px 6px;
@@ -345,7 +360,7 @@
     text-decoration: none;
     transition: background-color 0.3s ease;
   }
-  .play-button:hover {
+  .play-button-home:hover {
     background-color: #0056b3;
   }
 }
@@ -366,7 +381,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 
-  .movie-card {
+  .movie-card-home {
     position: relative;
     border-radius: 5px;
     overflow: hidden;
@@ -374,37 +389,37 @@
     height: 100%;
   }
 
-  .title-home {
+  .title-home-home {
     margin: 5px 72px;
     font-size: 25px;
  
   }
-  .movie-year{
+  .movie-year-home{
     position: absolute;
     font-size: 11px;
     margin: 5px 5px;
     color: #ddd;
   }
   
-  .movie-title {
+  .movie-title-home {
     font-size: 13px;
     margin: 7px 10px;
     color: #5acbff;
   }
   
   
-  .movie-year-details {
+  .movie-year-details-home {
     font-size: 11px;
     margin: 5px 10px;
     color: #ddd;
   }
   
-  .movie-overview {
+  .movie-overview-home {
     font-size: 12;
     color: #ccc;
     margin-top: 5px;
   }
-  .play-button {
+  .play-button-home {
     font-size: 12px;
     display: inline-block;
     padding: 5px 12px;
@@ -417,7 +432,7 @@
     transition: background-color 0.3s ease;
   }
   
-  .play-button:hover {
+  .play-button-home:hover {
     background-color: #0056b3;
   }
 }

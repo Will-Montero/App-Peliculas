@@ -240,30 +240,30 @@ export const Home = () => {
       </header>
       <div className="movie-list-home">
         {dataPeliculas.map((pelicula) => (
-          <div key={pelicula.id} className="movie-card">
-            <div className="movie-info">
-              <span className="movie-year">
+          <div key={pelicula.id} className="movie-card-home">
+            <div className="movie-info-home">
+              <span className="movie-year-home">
                 {pelicula.release_date.split("-")[0]}
               </span>
             </div>
             <img loading="lazy"
               src={`https://image.tmdb.org/t/p/w500${pelicula.poster_path}`}
               alt={pelicula.title}
-              className="movie-poster"
+              className="movie-poster-home"
             />
-            <div className="movie-details">
-              <h2 className="movie-title">
-                {limitarPalabras(pelicula.title, 4)}
+            <div className="movie-details-home">
+              <h2 className="movie-title-home">
+                {limitarPalabras(pelicula.title, 2)}
               </h2>
-              <p className="movie-year-details">
+              <p className="movie-year-details-home">
                 {pelicula.release_date.split("-")[0]}
               </p>
-              <p className="movie-overview">
-                {limitarPalabras(pelicula.overview, 25)}
+              <p className="movie-overview-home">
+                {limitarPalabras(pelicula.overview, 20)}
               </p>
-              <NavLink to={`/reproducir/${pelicula.id}`} className="play-button">
+              <NavLink to={`/reproducir/${pelicula.id}`} className="play-button-home">
                   Reproducir
-                </NavLink>
+              </NavLink>
             </div>
           </div>
         ))}
