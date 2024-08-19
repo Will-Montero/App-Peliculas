@@ -2,7 +2,7 @@ import { SearchContext } from "./SearchContext";
 import { useState } from "react";
 export const SearchProvider = ({ children }) => {
 
-    const URL = "https://api.themoviedb.org/3/search/movie";
+  const URL = "https://api.themoviedb.org/3/search/movie";
   const API_KEY = "9b99ed6f20e2bfc951d790cf5a420564";
 
 
