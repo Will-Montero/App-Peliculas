@@ -1,11 +1,16 @@
 import { useState, useEffect } from "react"
+import { GenerosContext } from "./generosContext";
 
 export const GenerosProvider = ({ children }) => {
+
+    const URLGENEROS = "https://api.themoviedb.org/3/discover/movie";
+    const API_KEY = "9b99ed6f20e2bfc951d790cf5a420564";
+
     const [generos, setGeneros] = useState({})
 
     const fetchGeneros = async () => {
-        const generosIds = {
-            Action: 28,
+        const generoIds = {
+        Action: 28,
         Adventure: 12,
         Drama: 18,
         Horror: 27,
@@ -13,13 +18,36 @@ export const GenerosProvider = ({ children }) => {
         Animation: 16,
         History: 36
         }
+
+    const fetchGenero = async ( genero ) => {
+        try {
+            const response = await  fetch (`${URLGENEROS}?api_key=${API_KEY}&with_genres=${generoIds[genero]}`)
+            const data = await response.json()
+            return data.results;
+        } catch (error) {
+            console.error(error)
+        }
+    } 
+    const allGeneros = {};
+
+    for(const genero of Object.keys(generoIds)){
+      allGeneros[genero] = await fetchGenero(genero)
     }
 
-    const fetchGenero = async ( genero ) => ñ
-    const response = await  fetch (`https://api.themoviedb.org/3/discover/movie?api_key=<<YOUR_API_KEY>>&with_genres=${genreIds[genre]}`)
+    setGeneros(allGeneros)
+  }
+
+  useEffect(() => {
+    fetchGeneros()
+  }, [])
+   
+
 
   return (
     <>
+    <GenerosContext.Provider value={{generos}}>
+        {children }
+    </GenerosContext.Provider>
     
     </>
   )
