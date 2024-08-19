@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useContext } from "react";
 import { GenerosContext } from "../context/generos/GenerosContext";
 
-export const ReproducirPage = () => {
+export const ReproducirPelicula = () => {
   const { id } = useParams();
   const { generos } = useContext(GenerosContext);
 

@@ -9,7 +9,7 @@ import './styles/App.css'
 import { SearchProvider } from "./context/pelicula/SearchProvider"
 import { Generos } from './pages/Generos'
 import { GenerosProvider } from "./context/generos/GenerosProvider"
-import { ReproducirPelicula } from "./pages/ReproducirPelicula"
+import { ReproducirPelicula } from './pages/ReproducirPelicula'
 export const App = () => {
   return (
     <>

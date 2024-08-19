@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { GenerosContext } from "../context/generos/GenerosContext";
 import "../styles/generos.css";
+import { NavLink } from "react-router-dom";
 
 export const Generos = ({ genero }) => {
   const { generos } = useContext(GenerosContext);
@@ -41,6 +42,9 @@ export const Generos = ({ genero }) => {
                 <p className="genero-overview">
                   {limitarPalabras(movie.overview, 27)}
                 </p>
+                <NavLink to={`/reproducir/${movie.id}`} className="play-button">
+                  Reproducir
+                </NavLink>
               </div>
             </div>
           ))
