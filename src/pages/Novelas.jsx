@@ -1,4 +1,5 @@
 import { useState, useEffect} from 'react'
+import { NavLink } from 'react-router-dom'
 import '../styles/novelas.css'
 
 export const Novelas = () => {
@@ -46,6 +47,9 @@ export const Novelas = () => {
             </p>
             <p className="novela-year-details">{novela.first_air_date.split("-")[0]}</p>
               <p className="novela-overview">{limitarPalabras(novela.overview, 23)}</p>
+              <NavLink to={`/reproducir/${novela.id}`} className="play-button">
+                  Reproducir
+                </NavLink>
             </div>
           </div>
         ))}

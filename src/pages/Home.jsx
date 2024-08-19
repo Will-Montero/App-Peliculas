@@ -201,6 +201,8 @@ import { useEffect, useState } from "react";
 import "../styles/home.css";
 import { Series } from "./Series";
 import { Novelas } from './Novelas'
+import { NavLink } from "react-router-dom";
+
 
 export const Home = () => {
   const URL = "https://api.themoviedb.org/3/movie/popular";
@@ -259,6 +261,9 @@ export const Home = () => {
               <p className="movie-overview">
                 {limitarPalabras(pelicula.overview, 25)}
               </p>
+              <NavLink to={`/reproducir/${pelicula.id}`} className="play-button">
+                  Reproducir
+                </NavLink>
             </div>
           </div>
         ))}

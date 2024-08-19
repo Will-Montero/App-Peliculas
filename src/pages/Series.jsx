@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import '../styles/series.css';
 
 export const Series = () => {
@@ -61,6 +62,9 @@ export const Series = () => {
                 <p className="series-overview">
                   {limitarPalabras(serie.overview, 27)}
                 </p>
+                <NavLink to={`/reproducir/${serie.id}`} className="play-button">
+                  Reproducir
+                </NavLink>
               </div>
             </div>
           ))}

@@ -1,6 +1,7 @@
 import '../styles/search.css'
 import { useContext } from 'react';
 import { SearchContext } from '../context/pelicula/SearchContext';
+import { NavLink } from 'react-router-dom';
 export const Search = () => {
 
     const {dataPeliculas} = useContext(SearchContext)
@@ -40,6 +41,9 @@ export const Search = () => {
           <p className="movie-overview">
             {limitarPalabras(pelicula.overview, 27)}
           </p>
+          <NavLink to={`/reproducir/${pelicula.id}`} className="play-button">
+                  Reproducir
+                </NavLink>
         </div>
       </div>
     ))}
