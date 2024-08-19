@@ -42,7 +42,7 @@ export const Header = () => {
 
                 {/* Título del lado izquierdo */}
                 {!isSearching && <NavLink to='/' className="navbar-brand">PelisFree</NavLink>}
-                {/* Botón para expandir el menú en móviles */}
+                
 
                 {/* Elementos del navbar */}
                 {!isSearching && (
@@ -104,11 +104,15 @@ export const Header = () => {
                   </div>
                 )}
 
+
+                {/* Botón para expandir el menú en móviles */}
                 {!isSearching && (
                   <button className="search-button" onClick={handleSearchClick}>
                     🔍
                   </button>
                 )}
+
+
                 {/* Formulario de búsqueda */}
                 <div className="form-container d-flex   ms-auto">
                   {isSearching && (
@@ -135,7 +139,6 @@ export const Header = () => {
             </nav>
           </div>
         </header>
-
       </div>
     </>
   );
