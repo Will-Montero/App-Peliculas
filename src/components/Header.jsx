@@ -78,22 +78,25 @@ export const Header = () => {
                         </a>
                         <ul className="dropdown-menu">
                           <li>
-                            <a className="dropdown-item">Acción</a>
+                            <NavLink to='/Accion' className="dropdown-item">Acción</NavLink>
                           </li>
                           <li>
-                            <a className="dropdown-item" href="#">
-                              Otra acción
-                            </a>
+                            <NavLink to='/Aventura' className="dropdown-item">Aventura</NavLink>
                           </li>
                           <li>
-                            <a className="dropdown-item" href="#">
-                              Algo más aquí
-                            </a>
+                            <NavLink to='/Drama' className="dropdown-item">Drama</NavLink>
                           </li>
                           <li>
-                            <a className="dropdown-item" href="#">
-                              Algo más aquí
-                            </a>
+                            <NavLink to='/Horror' className="dropdown-item" >Horror</NavLink>
+                          </li>
+                          <li>
+                            <NavLink to='/Ciencia-Ficcion' className="dropdown-item">Ciencia Ficción</NavLink>
+                          </li>
+                          <li>
+                            <NavLink to='/Animacion' className="dropdown-item" >Animación</NavLink>
+                          </li>
+                          <li>
+                            <NavLink to='/Historia' className="dropdown-item">Historia</NavLink>
                           </li>
                         </ul>
                       </li>
