@@ -21,7 +21,7 @@ export const ReproducirPelicula = () => {
         <p>Simulación de Reproducción de {movie.title}</p>
         {/* Aquí podrías poner un iframe de video, o simplemente una imagen que represente el video */}
       </div>
-      <p>{movie.overview}</p>
+      <p>Resumen: {movie.overview}</p>
     </div>
   );
 };
