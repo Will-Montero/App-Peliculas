@@ -9,6 +9,7 @@ import './styles/App.css'
 import { SearchProvider } from "./context/pelicula/SearchProvider"
 import { Generos } from './pages/Generos'
 import { GenerosProvider } from "./context/generos/GenerosProvider"
+import { ReproducirPelicula } from "./pages/ReproducirPelicula"
 export const App = () => {
   return (
     <>
@@ -29,6 +30,7 @@ export const App = () => {
       <Route path="/ciencia-ficcion" element={<Generos genero="Science Fiction" />} />
       <Route path="/animacion" element={<Generos genero="Animation" />} />
       <Route path="/historia" element={<Generos genero="History" />} />
+      <Route path="/reproducir/:id" element={<ReproducirPelicula/>} />
     </Routes>
     <Footer></Footer>
     </SearchProvider>
