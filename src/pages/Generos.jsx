@@ -6,7 +6,7 @@ export const Generos = ({ genero }) => {
   const { generos } = useContext(GenerosContext);
 
   return (
-    <div>
+    <div clas>
       <h2>{genero}</h2>
       <div>
         {generos[genero] ? (
