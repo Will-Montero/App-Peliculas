@@ -1,0 +1,56 @@
+/* Estilo para el contenedor principal */
+.generos-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Título del género */
+  .generos-page h2 {
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Contenedor de las películas */
+  .generos-page .movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Estilo para cada tarjeta de película */
+  .generos-page .movie-card {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .generos-page .movie-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Estilo para la imagen de la película */
+  .generos-page .movie-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Título de la película */
+  .generos-page .movie-card h3 {
+    font-size: 1.2em;
+    color: #444;
+    text-align: center;
+    margin: 15px 0;
+  }
+  
+  /* Estilo para el mensaje de carga */
+  .generos-page p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #777;
+  }
+  

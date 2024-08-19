@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { GenresContext } from "./GenresContext";
+import '../styles/generos.css'
 
 export const GenerosPage = ({ genero }) => {
   const { generos } = useContext(GenresContext);
