@@ -17,9 +17,9 @@ export const App = () => {
     <GenerosProvider>
     <SearchProvider>
     <Header></Header>
-    <Search></Search>
     <Routes>
       <Route path="/" element={<Home></Home>}></Route>
+      <Route path="/search" element={<Search></Search>}></Route>
       <Route path="/series" element={<Series></Series>}></Route>
       <Route path="/novelas" element={<Novelas></Novelas>}></Route>
       <Route path="/*" element={<Navigate to='/'/>}></Route>
