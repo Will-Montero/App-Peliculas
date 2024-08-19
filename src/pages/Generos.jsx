@@ -10,7 +10,9 @@ export const Generos = ({ genero }) => {
       <h2>{genero}</h2>
       <div>
         {generos[genero] ? (
+            
           generos[genero].map((movie) => (
+            
             <div key={movie.id}>
               <h3>{movie.title}</h3>
               <img
@@ -19,6 +21,7 @@ export const Generos = ({ genero }) => {
               />
             </div>
           ))
+          
         ) : (
           <p>Cargando películas...</p>
         )}
