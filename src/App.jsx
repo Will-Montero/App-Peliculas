@@ -5,7 +5,6 @@ import { Novelas } from "./pages/Novelas"
 import { Series } from "./pages/Series"
 import { Search } from './pages/Search'
 import { Routes, Route, Navigate } from "react-router-dom";
-import './styles/App.css'
 import { SearchProvider } from "./context/pelicula/SearchProvider"
 import { Generos } from './pages/Generos'
 import { GenerosProvider } from "./context/generos/GenerosProvider"
