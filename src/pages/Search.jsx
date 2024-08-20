@@ -2,6 +2,7 @@ import '../styles/search.css'
 import { useContext } from 'react';
 import { SearchContext } from '../context/pelicula/SearchContext';
 import { NavLink } from 'react-router-dom';
+import { Loading } from '../components/Loading';
 
 
 export const Search = () => {
@@ -16,10 +17,11 @@ export const Search = () => {
         return texto;
       };
 
-      
+
   return (
     <div className="movie-list">
-    {dataPeliculas.map((pelicula) => (
+       {dataPeliculas ?
+    dataPeliculas.map((pelicula) => (
       <div key={pelicula.id} className="movie-card">
         <div className="movie-info">
           <span className="movie-year">
@@ -48,7 +50,8 @@ export const Search = () => {
           </NavLink>
         </div>
       </div>
-    )) 
+    )) : 
+    <Loading/>
    }
   </div>
   )
