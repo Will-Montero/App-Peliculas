@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useContext} from "react";
 import { SearchContext } from "../context/pelicula/SearchContext";
-
 import { NavLink } from "react-router-dom";
+
 import "../styles/header.css";
 
 
@@ -114,9 +114,9 @@ export const Header = () => {
 
 
                 {/* Formulario de búsqueda */}
-                <div className="form-container d-flex   ms-auto">
+                <div  className="form-container d-flex   ms-auto">
                   {isSearching && (
-                    <form onSubmit={handleSubmit} className="form-buscar">
+                    <form onSubmit={handleSubmit}  className="form-buscar">
                       <input
                       
                         type="text"

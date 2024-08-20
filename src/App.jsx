@@ -17,9 +17,9 @@ export const App = () => {
     <GenerosProvider>
     <SearchProvider>
     <Header></Header>
+    <Search></Search>
     <Routes>
       <Route path="/" element={<Home></Home>}></Route>
-      <Route path="/search" element={<Search to='/search'/>}></Route>
       <Route path="/series" element={<Series></Series>}></Route>
       <Route path="/novelas" element={<Novelas></Novelas>}></Route>
       <Route path="/*" element={<Navigate to='/'/>}></Route>
@@ -31,6 +31,7 @@ export const App = () => {
       <Route path="/animacion" element={<Generos genero="Animation" />} />
       <Route path="/historia" element={<Generos genero="History" />} />
       <Route path="/reproducir/:id" element={<ReproducirPelicula/>} />
+      
     </Routes>
     <Footer></Footer>
     </SearchProvider>
