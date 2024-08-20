@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { useContext} from "react";
+import { useState, useContext, useRef } from "react";
 import { SearchContext } from "../context/pelicula/SearchContext";
 import { NavLink } from "react-router-dom";
 
@@ -18,6 +17,16 @@ export const Header = () => {
     setIsSearching(false);
     setBusqueda("");
   };
+
+    // Referencia al colapso del menú
+    const navbarRef = useRef(null);
+
+    // Función para cerrar el menú
+    const handleNavLinkClick = () => {
+      if (navbarRef.current && navbarRef.current.classList.contains("show")) {
+        navbarRef.current.classList.remove("show");
+      }
+    }
 
   return (
     <>
@@ -49,25 +58,26 @@ export const Header = () => {
                   <div
                     className="collapse navbar-collapse"
                     id="navbarSupportedContent"
+                    ref={navbarRef}
                   >
                     <ul className="navbar-nav  mb-2 mb-lg-0">
                       <li className="nav-item">
-                        <NavLink to='/' className="nav-link" href="#">
+                        <NavLink to='/' onClick={handleNavLinkClick} className="nav-link" href="#">
                           Inicio
                         </NavLink>
                       </li>
                       <li className="nav-item">
-                        <NavLink to='/series' className="nav-link" href="#">
+                        <NavLink to='/series' onClick={handleNavLinkClick} className="nav-link" href="#">
                           Series
                         </NavLink>
                       </li>
                       <li className="nav-item">
-                        <NavLink to='/novelas' className="nav-link" href="#">
+                        <NavLink to='/novelas' onClick={handleNavLinkClick} className="nav-link" href="#">
                           Novelas
                         </NavLink>
                       </li>
                       <li className="nav-item">
-                        <a
+                        <a onClick={handleNavLinkClick}
                           className="nav-link"
                           href="#"
                           role="button"
@@ -76,27 +86,27 @@ export const Header = () => {
                         >
                           Géneros
                         </a>
-                        <ul className="dropdown-menu">
+                        <ul  ref={navbarRef} className="dropdown-menu">
                           <li>
-                            <NavLink to='/Accion' className="dropdown-item">Acción</NavLink>
+                            <NavLink to='/Accion' onClick={handleNavLinkClick} className="dropdown-item">Acción</NavLink>
                           </li>
                           <li>
-                            <NavLink to='/Aventura' className="dropdown-item">Aventura</NavLink>
+                            <NavLink to='/Aventura' onClick={handleNavLinkClick} className="dropdown-item">Aventura</NavLink>
                           </li>
                           <li>
-                            <NavLink to='/Drama' className="dropdown-item">Drama</NavLink>
+                            <NavLink to='/Drama' onClick={handleNavLinkClick} className="dropdown-item">Drama</NavLink>
                           </li>
                           <li>
-                            <NavLink to='/Horror' className="dropdown-item" >Horror</NavLink>
+                            <NavLink to='/Horror' onClick={handleNavLinkClick} className="dropdown-item" >Horror</NavLink>
                           </li>
                           <li>
-                            <NavLink to='/Ciencia-Ficcion' className="dropdown-item">Ciencia Ficción</NavLink>
+                            <NavLink to='/Ciencia-Ficcion' onClick={handleNavLinkClick} className="dropdown-item">Ciencia Ficción</NavLink>
                           </li>
                           <li>
-                            <NavLink to='/Animacion' className="dropdown-item" >Animación</NavLink>
+                            <NavLink to='/Animacion' onClick={handleNavLinkClick} className="dropdown-item" >Animación</NavLink>
                           </li>
                           <li>
-                            <NavLink to='/Historia' className="dropdown-item">Historia</NavLink>
+                            <NavLink to='/Historia' onClick={handleNavLinkClick} className="dropdown-item">Historia</NavLink>
                           </li>
                         </ul>
                       </li>
