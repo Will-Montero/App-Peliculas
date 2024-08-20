@@ -202,6 +202,7 @@ import "../styles/home.css";
 import { Series } from "./Series";
 import { Novelas } from './Novelas'
 import { NavLink } from "react-router-dom";
+import { Loading } from "../components/Loading";
 
 
 export const Home = () => {
@@ -239,7 +240,7 @@ export const Home = () => {
         <h1 className="title-home">Películas Online ▶️</h1>
       </header>
       <div className="movie-list-home">
-        {dataPeliculas.map((pelicula) => (
+        {dataPeliculas ? dataPeliculas.map((pelicula) => (
           <div key={pelicula.id} className="movie-card-home">
             <div className="movie-info-home">
               <span className="movie-year-home">
@@ -266,7 +267,8 @@ export const Home = () => {
               </NavLink>
             </div>
           </div>
-        ))}
+        )) : 
+        <Loading/>}
       </div>
       <Series></Series>
       <Novelas></Novelas>

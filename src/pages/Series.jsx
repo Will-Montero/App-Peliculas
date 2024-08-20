@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import '../styles/series.css';
+import { Loading } from "../components/Loading";
 
 export const Series = () => {
   const URL = "https://api.themoviedb.org/3/tv/popular";
@@ -40,7 +41,7 @@ export const Series = () => {
           <h1 className="title">Series Online ▶️</h1>
         </header>
         <div className="series-list">
-          {dataSeries.map((serie) => (
+          {dataSeries ? dataSeries.map((serie) => (
             <div key={serie.id} className="series-card">
               <div className="series-info">
                 <span className="series-year">
@@ -67,7 +68,8 @@ export const Series = () => {
                 </NavLink>
               </div>
             </div>
-          ))}
+          )): 
+          <Loading/>}
         </div>
       </div>
     </>
