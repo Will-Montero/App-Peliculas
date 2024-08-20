@@ -86,7 +86,7 @@ export const Header = () => {
                         >
                           Géneros
                         </a>
-                        <ul  ref={navbarRef} className="dropdown-menu">
+                        <ul className="dropdown-menu">
                           <li>
                             <NavLink to='/Accion' onClick={handleNavLinkClick} className="dropdown-item">Acción</NavLink>
                           </li>
