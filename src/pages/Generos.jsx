@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import { Series } from "./Series";
 import { Novelas } from "./Novelas";
 import { Home } from "./Home";
+import { Loading } from "../components/Loading";
 
 export const Generos = ({ genero }) => {
   const { generos } = useContext(GenerosContext);
@@ -52,12 +53,10 @@ export const Generos = ({ genero }) => {
             </div>
           ))
         ) : (
-          <p>Cargando películas...</p>
+          <Loading></Loading>
         )}
       </div>
-      <Home></Home>
-      <Novelas></Novelas>
-      <Series></Series>
+      
     </div>
   );
 };

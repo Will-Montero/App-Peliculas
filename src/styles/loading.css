@@ -1,0 +1,43 @@
+/* HTML: <div class="loader"></div> */
+
+.container-loading{
+width: 100vw;
+height: 60vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.loading {
+    width: 70px;
+    aspect-ratio: 1;
+    display: grid;
+    border: 4px solid #0000;
+    border-radius: 50%;
+    border-color: hsl(213, 86%, 55%) #0000;
+    animation: l16 1.8s infinite linear;
+  }
+  .loading::before,
+  .loading::after {    
+    content: "";
+    grid-area: 1/1;
+    margin: 2px;
+    border: inherit;
+    border-radius: 50%;
+  }
+  .loading::before {
+    border-color: #d1e2f6 #0000;
+    animation: inherit; 
+    animation-duration: .8s;
+    animation-direction: reverse;
+  }
+  .loading::after {
+    margin: 8px;
+  }
+  @keyframes l16 { 
+    100%{transform: rotate(1turn)}
+  }
+  .aviso-loading{
+   margin-top: 2vh;
+   font-size: 20px;
+  }
