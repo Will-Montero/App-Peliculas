@@ -43,13 +43,13 @@ export const Search = () => {
 
         <div className="movie-details">
           <h2 className="movie-title">
-            {limitarPalabras(pelicula.title, 4)}
+            {limitarPalabras(pelicula.title, 2)}
           </h2>
           <p className="movie-year-details">
             {pelicula.release_date.split("-")[0]}
           </p>
           <p className="movie-overview">
-            {limitarPalabras(pelicula.overview, 23)}
+            {limitarPalabras(pelicula.overview, 20)}
           </p>
           <NavLink to={"/reproducir/:id" }  className="play-button-search" >
                   Reproducir

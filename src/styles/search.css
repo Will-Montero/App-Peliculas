@@ -35,7 +35,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   color: rgb(114, 164, 230);
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.4s ease-in-out;
   border-radius: 10px;
 }
@@ -69,22 +69,22 @@
 }
 
 .movie-title {
-  margin: 5px 7px;
+  margin:5px;
   font-size: 8px;
-  margin-bottom: 3px;
 }
 
 .movie-year-details {
-  margin: 5px 7px;
-  font-size: 8px;
+  margin: 5px;
+  font-size: 7px;
   margin-bottom: 0px;
 }
 
 .movie-overview {
-  margin: 5px 1px 5px 7px;
-  font-size: 9px;
-  width: 90%;
+  margin: 5px;
+  font-size: 8px;
+  width: 95%;
   letter-spacing: 0.5px;
+  height: 10vh;
 }
 .play-button-search {
   font-size: 8px;
@@ -128,19 +128,7 @@
       object-fit: cover;
       transition: opacity 0.3s ease-in-out;
     }
-  
-    .movie-details {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 30vh;
-      width: 10vw;
-      background-color: rgba(0, 0, 0, 0.7);
-      color: rgb(114, 164, 230);
-      opacity: 0;
-      transition: opacity 0.4s ease-in-out;
-      border-radius: 10px;
-    }
+ 
   
     .movie-year {
       background-color: rgba(0, 0, 0, 0.7);
@@ -172,21 +160,24 @@
   
     .movie-title {
       font-size: 14px;
+      margin: 5px 10px;
       margin-bottom: 3px;
     }
   
     .movie-year-details {
+      margin: 5px 10px;
       font-size: 10px;
     }
   
     .movie-overview {
       font-size: 11px;
-      margin-bottom: 8px;
+      margin: 5px 10px;
+      height: 20vh;
     }
     .play-button-search {
-      font-size: 10px;
+      font-size: 12px;
       display: inline-block;
-      padding: 3px 6px;
+      padding: 4px 8px;
       margin:  3px 5px;
       color: #fff;
       background-color: #007bff;
@@ -209,19 +200,27 @@
       background-color: black;
     }
   
-    .movie-card {
-      margin: 0 auto;
-      position: relative;
-      overflow: hidden;
-      border-radius: 10px;
-      height: 100%;
-      width: 100%;
-      box-shadow: 0 0 0.5px;
+  
+    .movie-title {
+      font-size: 14px;
+      margin: 5px 10px;
+      margin-bottom: 3px;
+    }
+  
+    .movie-year-details {
+      margin: 5px 10px;
+      font-size: 10px;
+    }
+  
+    .movie-overview {
+      font-size: 11px;
+      margin: 5px 10px;
+      height: 25vh;
     }
     .play-button-search {
       font-size: 12px;
       display: inline-block;
-      padding: 5px 12px;
+      padding: 4px 8px;
       margin:  3px 5px;
       color: #fff;
       background-color: #007bff;
