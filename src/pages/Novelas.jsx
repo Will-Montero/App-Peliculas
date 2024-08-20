@@ -5,9 +5,9 @@ import { Loading } from '../components/Loading'
 
 export const Novelas = () => {
 
-    const [dataNovelas, setDataNovelas] = useState([])
+  const [dataNovelas, setDataNovelas] = useState([])
 
-    const URL = "https://api.themoviedb.org/3/discover/tv";
+  const URL = "https://api.themoviedb.org/3/discover/tv";
   const API_KEY = "9b99ed6f20e2bfc951d790cf5a420564";
 
   const fetchNovelas = async () => {

@@ -3,6 +3,9 @@ import { useContext } from 'react';
 import { SearchContext } from '../context/pelicula/SearchContext';
 import { NavLink } from 'react-router-dom';
 import { Loading } from '../components/Loading';
+import { Home } from './Home';
+import { Series } from './Series';
+import { Novelas } from './Novelas';
 
 
 
@@ -20,6 +23,8 @@ export const Search = () => {
 
 
   return (
+    <>
+    <div className='container-search'>
     <div className="movie-list">
        {!dataPeliculas ?  <Loading/> :
     dataPeliculas.map((pelicula) => (
@@ -55,5 +60,10 @@ export const Search = () => {
    }
 
   </div>
+  <Home/>
+  <Novelas/>
+  <Series/>
+    </div>
+    </>
   )
 }

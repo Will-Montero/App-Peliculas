@@ -6,6 +6,9 @@ import  avisoEnsayo from '../assets/error/avisoEnsayo.png'
 import '../styles/error.css'
 import '../styles/reproductorPelicula.css'
 import { Loading } from "../components/Loading";
+import { Home } from "./Home";
+import { Series } from "./Series";
+import { Novelas } from "./Novelas";
 
 
 export const ReproducirPelicula = () => {
@@ -19,12 +22,13 @@ export const ReproducirPelicula = () => {
     if (movie) break;
   }
  
-  if (!movie) return <Error/>;
+  if (!movie) return <Loading/>
 
   return (
    <>
-   {movie.title ? 
-    <div className="container-reproductor">
+  <div className="Reproductor-container">
+  {movie.title ? 
+    <div className="card-reproductor">
     <h2>{movie.title}</h2>
    <div className="video-reproductor">
      
@@ -32,8 +36,15 @@ export const ReproducirPelicula = () => {
 
    </div>
    <p className="overview-reproductor">Lamentamos no traer la pelicula, PelisFree es una App de ensayo en el cual se hacen varios  fetch de una api(TMBD) el cual me permite practicar React</p>
+   <br />
  </div> :
-  <Loading/>}
+  <Loading/> 
+
+  }
+  <Novelas/>
+  <Home/>
+  <Series/>
+  </div>
    </>
      
   );

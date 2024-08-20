@@ -1,6 +1,9 @@
 /* Página de simulación de reproducción */
-.container-reproductor {
+.container-reproductor{
   width: 100%;
+}
+.card-reproductor {
+    width: 100%;
     padding: 20px;
     text-align: center;
   }
