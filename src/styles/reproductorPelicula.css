@@ -1,49 +1,44 @@
 /* Página de simulación de reproducción */
-.container-reproductor{
+.container-reproductor {
   width: 100%;
+  padding: 20px;
+  text-align: center;
 }
+
 .card-reproductor {
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-  }
-.video-reproductor{
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.video-reproductor {
   margin: 0 auto;
   width: 70%;
-  
 }
+
 .imagen-reproductor {
   width: 60%;
   height: auto;
-
 }
-  .overview-reproductor {
-    margin: 25px auto;
-    width: 90%;
-    font-size: 01rem;
-    color: #dee0e1;
+
+.overview-reproductor {
+  margin: 25px auto;
+  width: 90%;
+  font-size: 1rem;
+  color: #dee0e1;
+}
+
+/* Estilos específicos para pantallas grandes */
+@media (min-width: 900px) {
+  .video-reproductor {
+    width: 40%;
   }
 
-  @media (min-width: 900px){
-    .container-reproductor {
-      width: 100%;
-      padding: 20px;
-      text-align: center;
-      }
-    .video-reproductor{
-      margin: 0 auto;
-      width: 40%;
-      
-    }
-    .imagen-reproductor {
-      width: 50%;
-      height: auto;
-    
-    }
-    .overview-reproductor {
-      margin: 25px auto;
-      width: 50%;
-      font-size: 01rem;
-      color: #dee0e1;
-    }
+  .imagen-reproductor {
+    width: 50%;
   }
+
+  .overview-reproductor {
+    width: 50%;
+  }
+}
