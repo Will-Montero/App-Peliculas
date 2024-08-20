@@ -1,11 +1,15 @@
 .container-error {
-    margin: 25px 50px;
+    height: 60vh;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     box-shadow: 0 0 10px rgba(3, 80, 125, 0.797);
 }
 .imagen-error{
     margin: 0 auto;
     width: 50%;
-    height: 45%;
     display: flex;
     justify-content: center;
     align-items: center;
