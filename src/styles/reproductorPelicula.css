@@ -14,9 +14,11 @@
   height: auto;
 
 }
-  .reproducir-page p {
-    font-size: 1.2em;
-    color: #555;
+  .overview-reproductor {
+    margin: 25px auto;
+    width: 90%;
+    font-size: 01rem;
+    color: #dee0e1;
   }
 
   @media (min-width: 900px){
