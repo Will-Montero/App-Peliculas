@@ -54,13 +54,13 @@ export const Series = () => {
               />
               <div className="series-details">
                 <h2 className="series-title">
-                  {limitarPalabras(serie.name, 4)}
+                  {limitarPalabras(serie.name, 2)}
                 </h2>
                 <p className="series-year-details">
                   {serie.first_air_date.split("-")[0]}
                 </p>
                 <p className="series-overview">
-                  {limitarPalabras(serie.overview, 27)}
+                  {limitarPalabras(serie.overview, 25)}
                 </p>
                 <NavLink to={`/reproducir/${serie.id}`} className="play-button">
                   Reproducir

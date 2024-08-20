@@ -63,11 +63,10 @@
 .movie-year-home {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 2px;
-  margin-left: 5vw;  
-  font-size: 7px;
+  font-size: 8px;
   border-radius: 3px;
   position: absolute;
-  margin: 5px 1px;
+  margin: 4px 5px;
   color: #ddd;
 }
 
@@ -92,7 +91,7 @@
 }
 
 .play-button-home {
-  font-size: 10px;
+  font-size: 8px;
   display: inline-block;
   color: #fff;
   background-color: #007bff;
@@ -102,7 +101,7 @@
   transition: background-color 0.3s ease;
   padding: 2px 4px;
   margin: 0 3px;
-  width: 18vw;
+  width: 13vw;
 }
 
 .play-button-home:hover {
