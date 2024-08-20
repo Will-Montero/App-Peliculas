@@ -22,7 +22,7 @@ export const ReproducirPelicula = () => {
     if (movie) break;
   }
  
-  if (!movie) return <Loading/>
+  if (!movie) return <Error/>;
 
   return (
    <>
