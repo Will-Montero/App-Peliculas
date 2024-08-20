@@ -7,7 +7,7 @@ export const Footer = () => {
     <footer>
         <hr/>
         <br />
-      <p className="footer-text">PelisFree es una página web de ensayo al traer una Api con una librería llamada React</p>
+      <p className="footer-text">PelisFree es una App de ensayo en el cual se hacen un fetch de una api: TMBD el cual me ayuda a practicar React</p>
       <br />
       <p></p>
     </footer>
