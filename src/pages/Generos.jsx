@@ -56,7 +56,9 @@ export const Generos = ({ genero }) => {
           <Loading></Loading>
         )}
       </div>
-      
+      <Home/>
+      <Series/>
+      <Novelas/>
     </div>
   );
 };
