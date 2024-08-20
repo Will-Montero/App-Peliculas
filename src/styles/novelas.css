@@ -61,7 +61,7 @@
   color: #ccc;
   margin: 5px 10px;
   letter-spacing: 0.8px;
-  height: 17vh;
+  height: 19vh;
 }
 
 .play-button-novela {
@@ -99,7 +99,7 @@
   .novela-overview {
     font-size: 11px;
     letter-spacing: 0.6px;
-    height: 18vh;
+    height: 22vh;
   }
 
   .play-button-novela {
@@ -122,7 +122,8 @@
   }
 
   .novela-overview {
-    height: 20vh;
+    margin: 20px 10px;
+    height: 23vh;
   }
 
   .play-button-novela {
