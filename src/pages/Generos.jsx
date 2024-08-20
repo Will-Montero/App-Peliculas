@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { GenerosContext } from "../context/generos/GenerosContext";
-import { Error } from "../components/Error";
 import "../styles/generos.css";
 import { NavLink } from "react-router-dom";
 
@@ -50,7 +49,7 @@ export const Generos = ({ genero }) => {
             </div>
           ))
         ) : (
-          <Error></Error>
+          <p>Cargando películas...</p>
         )}
       </div>
     </div>

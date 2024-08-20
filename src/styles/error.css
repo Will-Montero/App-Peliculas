@@ -1,5 +1,42 @@
 .container-error {
-    width: 100%;
-    height: 100;
-    background-color: aliceblue;
+    margin: 25px 50px;
+    box-shadow: 0 0 10px rgba(3, 80, 125, 0.797);
+}
+.imagen-error{
+    margin: 0 auto;
+    width: 50%;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0 0 15px #027595f2);
+}
+.aviso-error {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    padding: 25px 0;
+    color: #3e98cbf2;
+}
+@media (min-width: 900px){
+    .container-error {
+        margin: 50px auto;
+        width: 70%;
+        height: 10%;
+        box-shadow: 0 0 10px rgba(3, 80, 125, 0.797);
+    }
+    .imagen-error{
+        margin: 0 auto;
+        width: 30%;
+        height: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        filter: drop-shadow(0 0 15px rgba(2, 117, 149, 0.95));
+    }
+    .aviso-error {
+        margin: 30px 50px;
+        font-size: 20px;
+        padding: 50px;
+    }
 }

@@ -1,7 +1,5 @@
 import { useState, useEffect} from 'react'
 import { NavLink } from 'react-router-dom'
-import { Error } from '../components/Error'
-import '../styles/error.css'
 import '../styles/novelas.css'
 
 export const Novelas = () => {
@@ -36,7 +34,7 @@ export const Novelas = () => {
     <div className="container-novelas">
       <h1 className='novela-titulo'>Novelas Populares ▶️</h1>
       <div className="novela-list">
-        {dataNovelas ? dataNovelas.map((novela) => (
+        {dataNovelas.map((novela) => (
           <div key={novela.id} className="novela-card">
             <img
               src={`https://image.tmdb.org/t/p/w500${novela.poster_path}`}
@@ -49,15 +47,12 @@ export const Novelas = () => {
             </p>
             <p className="novela-year-details">{novela.first_air_date.split("-")[0]}</p>
               <p className="novela-overview">{limitarPalabras(novela.overview, 20)}</p>
-              <NavLink to="/reproducir/:id" className="play-button-novela">
+              <NavLink to={`/reproducir/${novela.id}`} className="play-button-novela">
                   Reproducir
                 </NavLink>
             </div>
           </div>
-        ))
-      :
-      <Error></Error>} 
-        
+        ))}
       </div>
     </div>
   )

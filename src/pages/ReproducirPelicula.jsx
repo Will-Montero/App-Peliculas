@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
 import { GenerosContext } from "../context/generos/GenerosContext";
+import { Error } from "../components/Error";
+import '../styles/error.css'
 import '../styles/reproductorPelicula.css'
 
 export const ReproducirPelicula = () => {
@@ -13,7 +15,7 @@ export const ReproducirPelicula = () => {
     if (movie) break;
   }
 
-  if (!movie) return <p>Película no encontrada</p>;
+  if (!movie) return <Error></Error>;
 
   return (
     <div className="reproducir-page">
