@@ -17,7 +17,7 @@ export const ReproducirPelicula = () => {
     if (movie) break;
   }
 
-  if (!movie) return <Error></Error>;
+  if (!movie) return <Error/>;
 
   return (
     <div className="container-reproductor">

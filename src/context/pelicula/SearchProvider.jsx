@@ -1,5 +1,6 @@
 import { SearchContext } from "./SearchContext";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 export const SearchProvider = ({ children }) => {
 
   const URL = "https://api.themoviedb.org/3/search/movie";
@@ -8,6 +9,7 @@ export const SearchProvider = ({ children }) => {
 
   const [busqueda, setBusqueda] = useState("");
   const [dataPeliculas, setDataPeliculas] = useState([]);
+  const navigate = useNavigate();
 
 
 
@@ -26,14 +28,16 @@ export const SearchProvider = ({ children }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    navigate('/search')
     if (busqueda.length > 1) fetchPeliculas();
+    
   };
 
   const handleOnChange = (e) => {
     setBusqueda(e.target.value);
   };
   return (
-    <SearchContext.Provider value={{ dataPeliculas, handleSubmit, handleOnChange, busqueda, setBusqueda}}>
+    <SearchContext.Provider value={{ dataPeliculas, handleSubmit, handleOnChange, busqueda, setBusqueda, navigate}}>
         {children}
     </SearchContext.Provider>
   )

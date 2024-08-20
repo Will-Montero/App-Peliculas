@@ -3,7 +3,7 @@ import { Footer } from "./components/Footer"
 import { Home } from "./pages/Home"
 import { Novelas } from "./pages/Novelas"
 import { Series } from "./pages/Series"
-import { Search } from './components/Search'
+import { Search } from './pages/Search'
 import { Routes, Route, Navigate } from "react-router-dom";
 import './styles/App.css'
 import { SearchProvider } from "./context/pelicula/SearchProvider"
@@ -16,11 +16,11 @@ export const App = () => {
     <SearchProvider>
     <GenerosProvider>
     <Header></Header>
-    <Search></Search>
     <Routes>
       <Route path="/" element={<Home></Home>}></Route>
-      <Route path="/series" element={<Series></Series>}></Route>
-      <Route path="/novelas" element={<Novelas></Novelas>}></Route>
+      <Route path="/search" element={<Search/>}></Route>
+      <Route path="/series" element={<Series/>}></Route>
+      <Route path="/novelas" element={<Novelas/>}></Route>
       <Route path="/*" element={<Navigate to='/'/>}></Route>
       <Route path="/accion" element={<Generos genero="Accion" />} />
       <Route path="/aventura" element={<Generos genero="Aventura" />} />
