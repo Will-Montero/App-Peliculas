@@ -7,7 +7,6 @@
 .genero-list {
   width: 100%;
   height: 100%;
-  padding: 5px 0;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -19,7 +18,7 @@
   position: relative;
   overflow: hidden;
   height: 25vh;
-  width: 30vw;
+  width: 32vw;
   border-radius: 10px;
   box-shadow: 0 0 0.5px;
 }
