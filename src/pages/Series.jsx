@@ -1,30 +1,12 @@
-import { useState, useEffect } from "react";
+
 import { NavLink } from "react-router-dom";
 import '../styles/series.css';
 import { Loading } from "../components/Loading";
+import { fetchSeries } from "../hook/fetchSeries";
 
 export const Series = () => {
-  const URL = "https://api.themoviedb.org/3/tv/popular";
-  const API_KEY = "9b99ed6f20e2bfc951d790cf5a420564";
-
-  const [dataSeries, setDataSeries] = useState([]);
-
-  const fetchSeries = async () => {
-    try {
-      const response = await fetch(
-        `${URL}?api_key=${API_KEY}`
-      );
-      const data = await response.json();
-      setDataSeries(data.results);
-      console.log(data);
-    } catch (error) {
-      console.error("Error: ", error);
-    }
-  };
-
-  useEffect(() => {
-    fetchSeries();
-  }, []);
+   
+    const { dataSeries } = fetchSeries()
 
   const limitarPalabras = (texto, maxPalabras) => {
     const palabras = texto.split(" ");
