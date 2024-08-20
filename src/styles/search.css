@@ -1,96 +1,90 @@
+/* Estilos base para la lista de películas */
 .movie-list {
   width: 100%;
   height: 100%;
-  padding: 5px 0px;
+  padding: 5px 0;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 5px;
 }
 
+/* Estilos base para las tarjetas de películas */
 .movie-card {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  height: 23vh;
-  width: 32vw;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 0.5px;
 }
 
+/* Estilos base para el póster de la película */
 .movie-poster {
+  width: 100%;
   height: 100%;
-  width: 98%;
+  object-fit: cover;
   transition: opacity 0.8s ease-in-out;
 }
 
+/* Información de la película dentro de la tarjeta */
 .movie-info {
   position: absolute;
   padding: 1px 3px;
 }
 
+/* Detalles de la película (mostrados al hacer hover) */
 .movie-details {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: rgb(114, 164, 230);
-  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  opacity: 0;
   transition: opacity 0.4s ease-in-out;
   border-radius: 10px;
 }
 
+/* Estilos para el año de la película */
 .movie-year {
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 2px 2px;
+  padding: 2px;
   font-size: 10px;
   border-radius: 3px;
 }
 
-.movie-card:hover .movie-poster {
-  opacity: 0;
-}
-
-.movie-card:hover .movie-details {
-  opacity: 1;
-}
-
-.movie-poster {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.movie-details {
-  margin: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-  width: 100%;
+/* Estilos para los títulos, año y resumen */
+.movie-title,
+.movie-year-details,
+.movie-overview {
+  margin: 5px;
 }
 
 .movie-title {
-  margin:5px;
   font-size: 8px;
 }
 
 .movie-year-details {
-  margin: 5px;
   font-size: 7px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .movie-overview {
-  margin: 5px;
   font-size: 8px;
   width: 95%;
   letter-spacing: 0.5px;
   height: 10vh;
 }
+
+/* Estilos para el botón de reproducción */
 .play-button-search {
   font-size: 8px;
   display: inline-block;
   padding: 2px 4px;
-  margin:  3px 5px;
+  margin: 3px 5px;
   color: #fff;
   background-color: #007bff;
   border-radius: 5px;
@@ -103,134 +97,54 @@
   background-color: #0056b3;
 }
 
-@media (min-width: 750px){
-  .movie-list {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr  1fr;
-      gap: 10px 5px;
-      width: 100%;
-      background-color: black;
-    }
-  
-    .movie-card {
-      margin: 0 auto;
-      position: relative;
-      overflow: hidden;
-      border-radius: 10px;
-      height: 100%;
-      width: 100%;
-      box-shadow: 0 0 0.5px;
-    }
-  
-    .movie-poster {
-      width: 80%;
-      height: 80%;
-      object-fit: cover;
-      transition: opacity 0.3s ease-in-out;
-    }
- 
-  
-    .movie-year {
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 2px 2px;
-      font-size: 10px;
-      border-radius: 3px;
-    }
-  
-    .movie-card:hover .movie-poster {
-      opacity: 0;
-    }
-  
-    .movie-card:hover .movie-details {
-      opacity: 1;
-    }
-  
-    .movie-poster {
-      height: 100%;
-      width: 100%;
-    }
-  
-    .movie-details {
-      background-color: rgba(0, 0, 0, 0.8);
-      color: white;
-      border-radius: 10px;
-      height: 100%;
-      width: 100%;
-    }
-  
-    .movie-title {
-      font-size: 14px;
-      margin: 5px 10px;
-      margin-bottom: 3px;
-    }
-  
-    .movie-year-details {
-      margin: 5px 10px;
-      font-size: 10px;
-    }
-  
-    .movie-overview {
-      font-size: 11px;
-      margin: 5px 10px;
-      height: 20vh;
-    }
-    .play-button-search {
-      font-size: 12px;
-      display: inline-block;
-      padding: 4px 8px;
-      margin:  3px 5px;
-      color: #fff;
-      background-color: #007bff;
-      border-radius: 5px;
-      text-align: center;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-    .play-button-search:hover {
-      background-color: #0056b3;
-    }
-}  
+/* Estilos al hacer hover en la tarjeta de la película */
+.movie-card:hover .movie-poster {
+  opacity: 0;
+}
 
-@media(min-width: 1020px) {
+.movie-card:hover .movie-details {
+  opacity: 1;
+}
+
+/* Estilos para pantallas medianas y grandes (750px y más) */
+@media (min-width: 750px) {
   .movie-list {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr  1fr;
-      gap: 10px 5px;
-      width: 55%;
-      background-color: black;
-    }
-  
-  
-    .movie-title {
-      font-size: 14px;
-      margin: 5px 10px;
-      margin-bottom: 3px;
-    }
-  
-    .movie-year-details {
-      margin: 5px 10px;
-      font-size: 10px;
-    }
-  
-    .movie-overview {
-      font-size: 11px;
-      margin: 5px 10px;
-      height: 25vh;
-    }
-    .play-button-search {
-      font-size: 12px;
-      display: inline-block;
-      padding: 4px 8px;
-      margin:  3px 5px;
-      color: #fff;
-      background-color: #007bff;
-      border-radius: 5px;
-      text-align: center;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-    
-    .play-button-search:hover {
-      background-color: #0056b3;
-    }
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px 5px;
+    background-color: black;
+  }
+
+  .movie-card {
+    height: 100%;
+    width: 100%;
+  }
+
+  .movie-title {
+    font-size: 14px;
+  }
+
+  .movie-year-details {
+    font-size: 10px;
+  }
+
+  .movie-overview {
+    font-size: 11px;
+    height: 20vh;
+  }
+
+  .play-button-search {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
+
+/* Estilos para pantallas grandes (1020px y más) */
+@media (min-width: 1020px) {
+  .movie-list {
+    width: 55%;
+  }
+
+  .movie-overview {
+    height: 25vh;
+  }
 }
