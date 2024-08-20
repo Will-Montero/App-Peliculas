@@ -1,5 +1,7 @@
 .container-error {
+    margin: 0 auto;
     height: 60vh;
+    width: 90vw;
     margin-top: 5vh;
     display: flex;
     flex-direction: column;
@@ -9,7 +11,7 @@
 }
 .imagen-error{
     margin: 0 auto;
-    width: 50%;
+    width: 40vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,22 +27,19 @@
 @media (min-width: 900px){
     .container-error {
         margin: 50px auto;
-        width: 70%;
-        height: 10%;
         box-shadow: 0 0 10px rgba(3, 80, 125, 0.797);
+        width: 50%;
+        height: 50%;
     }
     .imagen-error{
+        width: 15vw;
         margin: 0 auto;
-        width: 30%;
-        height: 30%;
         display: flex;
         justify-content: center;
         align-items: center;
         filter: drop-shadow(0 0 15px rgba(2, 117, 149, 0.95));
     }
     .aviso-error {
-        margin: 30px 50px;
-        font-size: 20px;
-        padding: 50px;
+       
     }
 }
