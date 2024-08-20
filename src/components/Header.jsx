@@ -77,7 +77,7 @@ export const Header = () => {
                         </NavLink>
                       </li>
                       <li className="nav-item">
-                        <a onClick={handleNavLinkClick}
+                        <a
                           className="nav-link"
                           href="#"
                           role="button"
