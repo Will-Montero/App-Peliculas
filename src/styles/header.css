@@ -264,9 +264,7 @@
   .navbar-brand:hover {
     color: #000000;
   }
-  .navbar-toggler {
-    background: linear-gradient(to bottom, #ff7e5f 0%, rgba(255, 255, 255, 0) 70%);  }
-
+  
     .navbar-collapse {
       margin: 0 20vw;
       width: 53%;
@@ -336,5 +334,6 @@
     border: none;
     font-size: 22px;
     justify-content: end;
-background: transparent;  }
+  background: transparent; 
+ }
 }
