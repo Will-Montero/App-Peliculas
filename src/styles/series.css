@@ -45,7 +45,7 @@
     flex-direction: column;
     background: rgba(0, 0, 0, 0.8);
     color: white;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.3s ease;
 }
 
@@ -74,14 +74,14 @@
 }
 
 .series-title {
-    font-size: 13px;
-    margin: 10px 5px;
+    font-size: 10px;
+    margin: 5px;
     color: #5acbff;
 }
 
 .series-year-details {
     font-size: 10px;
-    margin: 10px 5px;
+    margin: 5px;
 }
 
 .series-overview {
@@ -92,9 +92,9 @@
 }
 
 .play-button-series {
-    font-size: 9px;
+    font-size: 10px;
     display: inline-block;
-    padding: 2px 5px;
+    padding: 4px 5px;
     margin: 3px 5px;
     color: #fff;
     background-color: #007bff;
@@ -102,7 +102,7 @@
     text-align: center;
     text-decoration: none;
     transition: background-color 0.3s ease;
-    width: 14vw;
+    width: 20vw;
 }
 
 .play-button:hover {
@@ -122,7 +122,7 @@
     }
 
     .series-list {
-        width: 85%;
+        width: 100%;
         grid-template-columns: 1fr 1fr 1fr;
     }
 
@@ -150,7 +150,7 @@
 
 @media (min-width: 1020px) {
     .container-series {
-        width: 95%;
+        width: 100%;
     }
 
     .header-series {
@@ -159,9 +159,9 @@
     }
 
     .series-list {
-        width: 80%;
+        width: 100%;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 15px;
+        gap: 10px;
     }
 
     .series-title {
@@ -178,17 +178,22 @@
     .play-button-series {
         font-size: 12px;
         padding: 5px 12px;
-        width: 6vw;
+        width: 10vw;
     }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1200px) {
     .header-series {
         padding: 0px 22vw;
         font-size: 15px;
     }
 
     .series-list {
-        width: 55%;
+        width: 65%;
+    }
+    .play-button-series {
+        font-size: 12px;
+        padding: 5px 12px;
+        width: 8vw;
     }
 }
