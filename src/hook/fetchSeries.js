@@ -1,8 +1,8 @@
 import {useState, useEffect} from 'react'
 
 export const fetchSeries = () => {
-    const URL = "https://api.themoviedb.org/3/tv/popular";
-  const API_KEY = "9b99ed6f20e2bfc951d790cf5a420564";
+    const URL = `${import.meta.env.VITE_API_URL}/tv/popular`;
+  const API_KEY = `${import.meta.env.VITE_API_KEY}`;
 
   const [dataSeries, setDataSeries] = useState([]);
 
