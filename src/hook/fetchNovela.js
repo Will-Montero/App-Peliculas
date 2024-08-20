@@ -3,8 +3,8 @@ export const fetchNovela = () => {
 
     const [dataNovelas, setDataNovelas] = useState([])
 
-  const URL = "https://api.themoviedb.org/3/discover/tv";
-  const API_KEY = "9b99ed6f20e2bfc951d790cf5a420564";
+  const URL = `${import.meta.env.VITE_API_URL}/discover/tv`;
+  const API_KEY = `${import.meta.env.VITE_API_KEY}`
 
   const fetchNovelas = async () => {
     try {

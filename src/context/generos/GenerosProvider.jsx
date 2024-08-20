@@ -3,8 +3,8 @@ import { GenerosContext } from '../generos/GenerosContext'
 
 export const GenerosProvider = ({ children }) => {
 
-    const URLGENEROS = "https://api.themoviedb.org/3/discover/movie";
-    const API_KEY = "9b99ed6f20e2bfc951d790cf5a420564";
+    const URLGENEROS = `${import.meta.env.VITE_API_URL}/discover/movie`;
+    const API_KEY = `${import.meta.env.VITE_API_KEY}`
 
     const [generos, setGeneros] = useState({})
 

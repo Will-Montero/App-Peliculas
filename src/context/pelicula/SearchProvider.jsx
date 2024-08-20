@@ -3,8 +3,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 export const SearchProvider = ({ children }) => {
 
-  const URL = "https://api.themoviedb.org/3/search/movie";
-   const API_KEY = `${import.meta.env.DB_API_KEY}`
+  const URL = `${import.meta.env.VITE_API_URL}/search/movie`;
+  const API_KEY = `${import.meta.env.VITE_API_KEY}`
 
 
   const [busqueda, setBusqueda] = useState("");
