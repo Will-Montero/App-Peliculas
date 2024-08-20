@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 import { Loading } from '../components/Loading';
 
 
+
 export const Search = () => {
 
     const {dataPeliculas} = useContext(SearchContext)
@@ -51,8 +52,8 @@ export const Search = () => {
         </div>
       </div>
     )) 
-   
    }
+
   </div>
   )
 }
