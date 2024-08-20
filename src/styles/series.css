@@ -49,6 +49,11 @@
     transition: opacity 0.3s ease;
 }
 
+.series-info,
+.series-card:hover .series-details {
+    opacity: 1;
+}
+
 .series-info {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 2px;

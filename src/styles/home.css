@@ -15,7 +15,7 @@
 .title-home {
   font-size: 20px;
   color: #5acbff;
-  margin: 5px 72px; /* Ajuste de margen */
+  padding: 0;
 }
 
 .movie-list-home {
@@ -51,7 +51,7 @@
   display: flex;
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.7);
-  opacity: 1;
+  opacity: 0;
   transition: opacity 0.3s ease;
 }
 .movie-card-home {
@@ -157,6 +157,9 @@
 
   .header-home {
     padding-left: 5vw;
+  }
+  .header-home {
+    padding-left: 10vw;
   }
 
   .movie-list-home {
