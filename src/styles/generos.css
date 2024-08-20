@@ -17,8 +17,8 @@
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  height: 25vh;
-  width: 32vw;
+  height: 100%;
+  width: 30vw;
   border-radius: 10px;
   box-shadow: 0 0 0.5px;
 }
@@ -109,10 +109,14 @@
       gap: 10px 5px;
       background-color: black;
   }
+  .genero-card {
+    height: 100%;
+    width: 23vw;
+  }
 
   .genero-poster {
-      width: 80%;
-      height: 80%;
+      width: 100%;
+      height: 100%;
       transition: opacity 0.3s ease-in-out;
   }
 
@@ -140,6 +144,10 @@
 }
 
 @media (min-width: 1020px) {
+  .genero-card {
+    height: 100%;
+    width: 14vw;
+  }
   .genero-titulo {
       padding: 0 22vw;
   }
