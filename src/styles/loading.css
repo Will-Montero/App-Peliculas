@@ -41,3 +41,13 @@ align-items: center;
    margin-top: 2vh;
    font-size: 20px;
   }
+  @media(min-width: 800px){
+    .container-loading{
+      width: 55vw;
+      height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      }
+  }
