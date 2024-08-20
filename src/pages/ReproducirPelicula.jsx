@@ -27,7 +27,7 @@ export const ReproducirPelicula = () => {
         <img className="imagen-reproductor" src={avisoEnsayo} alt="error" />
 
       </div>
-      <p className="overview-reproductor">Lamentamos no traer la pelicula, PelisFree es una App de ensayo en el cual se hacen un fetch de una api: TMBD el cual me ayuda a practicar React</p>
+      <p className="overview-reproductor">Lamentamos no traer la pelicula, PelisFree es una App de ensayo en el cual se hacen un fetch de una api: TMBD el cual me permite practicar React</p>
     </div>
   );
 };

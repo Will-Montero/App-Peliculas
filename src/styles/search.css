@@ -86,7 +86,7 @@
   width: 90%;
   letter-spacing: 0.5px;
 }
-.play-button {
+.play-button-search {
   font-size: 8px;
   display: inline-block;
   padding: 2px 4px;
@@ -99,7 +99,7 @@
   transition: background-color 0.3s ease;
 }
 
-.play-button:hover {
+.play-button-search:hover {
   background-color: #0056b3;
 }
 
@@ -183,7 +183,7 @@
       font-size: 11px;
       margin-bottom: 8px;
     }
-    .play-button {
+    .play-button-search {
       font-size: 10px;
       display: inline-block;
       padding: 3px 6px;
@@ -195,7 +195,7 @@
       text-decoration: none;
       transition: background-color 0.3s ease;
     }
-    .play-button:hover {
+    .play-button-search:hover {
       background-color: #0056b3;
     }
 }  
@@ -218,7 +218,7 @@
       width: 100%;
       box-shadow: 0 0 0.5px;
     }
-    .play-button {
+    .play-button-search {
       font-size: 12px;
       display: inline-block;
       padding: 5px 12px;
@@ -231,7 +231,7 @@
       transition: background-color 0.3s ease;
     }
     
-    .play-button:hover {
+    .play-button-search:hover {
       background-color: #0056b3;
     }
 }

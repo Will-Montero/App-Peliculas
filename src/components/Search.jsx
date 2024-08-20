@@ -42,7 +42,7 @@ export const Search = () => {
           <p className="movie-overview">
             {limitarPalabras(pelicula.overview, 23)}
           </p>
-          <NavLink to={"/reproducir/:id"} element={<ReproducirPelicula></ReproducirPelicula>} className="play-button">
+          <NavLink to={"/reproducir/:id"} element={<ReproducirPelicula></ReproducirPelicula>} className="play-button-search" >
                   Reproducir
           </NavLink>
         </div>

@@ -2,6 +2,9 @@ import { useContext } from "react";
 import { GenerosContext } from "../context/generos/GenerosContext";
 import "../styles/generos.css";
 import { NavLink } from "react-router-dom";
+import { Series } from "./Series";
+import { Novelas } from "./Novelas";
+import { Home } from "./Home";
 
 export const Generos = ({ genero }) => {
   const { generos } = useContext(GenerosContext);
@@ -52,6 +55,9 @@ export const Generos = ({ genero }) => {
           <p>Cargando películas...</p>
         )}
       </div>
+      <Home></Home>
+      <Novelas></Novelas>
+      <Series></Series>
     </div>
   );
 };

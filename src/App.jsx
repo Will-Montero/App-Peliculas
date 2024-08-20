@@ -13,9 +13,8 @@ import { ReproducirPelicula } from './pages/ReproducirPelicula'
 export const App = () => {
   return (
     <>
-
-    <GenerosProvider>
     <SearchProvider>
+    <GenerosProvider>
     <Header></Header>
     <Search></Search>
     <Routes>
@@ -23,19 +22,18 @@ export const App = () => {
       <Route path="/series" element={<Series></Series>}></Route>
       <Route path="/novelas" element={<Novelas></Novelas>}></Route>
       <Route path="/*" element={<Navigate to='/'/>}></Route>
-      <Route path="/accion" element={<Generos genero="Action" />} />
-      <Route path="/aventura" element={<Generos genero="Adventure" />} />
+      <Route path="/accion" element={<Generos genero="Accion" />} />
+      <Route path="/aventura" element={<Generos genero="Aventura" />} />
       <Route path="/drama" element={<Generos genero="Drama" />} />
       <Route path="/horror" element={<Generos genero="Horror" />} />
-      <Route path="/ciencia-ficcion" element={<Generos genero="Science Fiction" />} />
-      <Route path="/animacion" element={<Generos genero="Animation" />} />
-      <Route path="/historia" element={<Generos genero="History" />} />
+      <Route path="/ciencia-ficcion" element={<Generos genero="Ciencia Ficción" />} />
+      <Route path="/animacion" element={<Generos genero="Animados" />} />
+      <Route path="/historia" element={<Generos genero="Historia" />} />
       <Route path="/reproducir/:id" element={<ReproducirPelicula/>} />
-      
     </Routes>
     <Footer></Footer>
-    </SearchProvider>
     </GenerosProvider>
+    </SearchProvider>
   
     </>
   )
