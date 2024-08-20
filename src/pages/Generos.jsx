@@ -30,7 +30,7 @@ export const Generos = ({ genero }) => {
                   {movie.release_date.split("-")[0]}
                 </span>
               </div>
-              <img
+              <img loading='lazy'
                 className="genero-poster"
                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                 alt={movie.title}
