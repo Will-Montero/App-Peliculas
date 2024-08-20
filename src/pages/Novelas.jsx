@@ -47,7 +47,7 @@ export const Novelas = () => {
             </p>
             <p className="novela-year-details">{novela.first_air_date.split("-")[0]}</p>
               <p className="novela-overview">{limitarPalabras(novela.overview, 20)}</p>
-              <NavLink to={`/reproducir/${novela.id}`} className="play-button-novela">
+              <NavLink to="/reproducir/:id" className="play-button-novela">
                   Reproducir
                 </NavLink>
             </div>

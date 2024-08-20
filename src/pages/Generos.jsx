@@ -34,15 +34,15 @@ export const Generos = ({ genero }) => {
 
               <div className="genero-details">
                 <h2 className="genero-title">
-                  {limitarPalabras(movie.title, 4)}
+                  {limitarPalabras(movie.title, 2)}
                 </h2>
                 <p className="genero-year-details">
                   {movie.release_date.split("-")[0]}
                 </p>
                 <p className="genero-overview">
-                  {limitarPalabras(movie.overview, 27)}
+                  {limitarPalabras(movie.overview, 23)}
                 </p>
-                <NavLink to={`/reproducir/${movie.id}`} className="play-button">
+                <NavLink to={`/reproducir/${movie.id}`} className="play-button-generos">
                   Reproducir
                 </NavLink>
               </div>
