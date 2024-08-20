@@ -2,8 +2,10 @@ import { useParams } from "react-router-dom";
 import { useContext } from "react";
 import { GenerosContext } from "../context/generos/GenerosContext";
 import { Error } from "../components/Error";
+import  avisoEnsayo from '../assets/error/avisoEnsayo.png'
 import '../styles/error.css'
 import '../styles/reproductorPelicula.css'
+
 
 export const ReproducirPelicula = () => {
   const { id } = useParams();
@@ -18,13 +20,14 @@ export const ReproducirPelicula = () => {
   if (!movie) return <Error></Error>;
 
   return (
-    <div className="reproducir-page">
+    <div className="container-reproductor">
       <h2>{movie.title}</h2>
-      <div className="video-placeholder">
-        <p>Simulación de Reproducción de {movie.title}</p>
-        {/* Aquí podrías poner un iframe de video, o simplemente una imagen que represente el video */}
+      <div className="video-reproductor">
+        
+        <img className="imagen-reproductor" src={avisoEnsayo} alt="error" />
+        <p className="aviso-reproductor"></p>
       </div>
-      <p>Resumen: {movie.overview}</p>
+      <p className="overview-reproductor">Resumen: {movie.overview}</p>
     </div>
   );
 };
