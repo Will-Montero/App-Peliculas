@@ -62,7 +62,7 @@ export const Series = () => {
                 <p className="series-overview">
                   {limitarPalabras(serie.overview, 25)}
                 </p>
-                <NavLink to={`/reproducir/${serie.id}`} className="play-button">
+                <NavLink to={`/reproducir/${serie.id}`} className="play-button-series">
                   Reproducir
                 </NavLink>
               </div>
