@@ -20,7 +20,7 @@ export const Search = () => {
 
   return (
     <div className="movie-list">
-       {dataPeliculas ?
+       {!dataPeliculas ?  <Loading/> :
     dataPeliculas.map((pelicula) => (
       <div key={pelicula.id} className="movie-card">
         <div className="movie-info">
@@ -50,8 +50,8 @@ export const Search = () => {
           </NavLink>
         </div>
       </div>
-    )) : 
-    <Loading/>
+    )) 
+   
    }
   </div>
   )
