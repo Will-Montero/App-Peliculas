@@ -47,6 +47,7 @@
   opacity: 0;
   transition: opacity 0.4s ease-in-out;
   border-radius: 10px;
+  padding: 10px 5px;
 }
 
 /* Estilos para el año de la película */
@@ -65,26 +66,26 @@
 }
 
 .movie-title {
-  font-size: 8px;
+  font-size: 12px;
 }
 
 .movie-year-details {
-  font-size: 7px;
+  font-size: 12px;
   margin-bottom: 0;
 }
 
 .movie-overview {
-  font-size: 8px;
+  font-size: 12px;
   width: 95%;
   letter-spacing: 0.5px;
-  height: 10vh;
+  height: 23vh;
 }
 
 /* Estilos para el botón de reproducción */
 .play-button-search {
-  font-size: 8px;
+  font-size: 12px;
   display: inline-block;
-  padding: 2px 4px;
+  padding: 4px 4px;
   margin: 3px 5px;
   color: #fff;
   background-color: #007bff;
@@ -124,9 +125,7 @@
     font-size: 14px;
   }
 
-  .movie-year-details {
-    font-size: 10px;
-  }
+
 
   .movie-overview {
     font-size: 11px;

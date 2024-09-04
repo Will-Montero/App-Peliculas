@@ -51,7 +51,7 @@ export const Search = () => {
             {pelicula.release_date.split("-")[0]}
           </p>
           <p className="movie-overview">
-            {limitarPalabras(pelicula.overview, 20)}
+            {limitarPalabras(pelicula.overview, 15)}
           </p>
           <NavLink to={"/reproducir/:id" }  className="play-button-search" >
                   Reproducir
