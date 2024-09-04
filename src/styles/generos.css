@@ -5,12 +5,12 @@
 }
 
 .genero-list {
-  width: 100%;
+  width: 98%;
   height: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 5px;
+  gap: 10px;
 }
 
 .genero-card {
@@ -18,7 +18,7 @@
   position: relative;
   overflow: hidden;
   height: 100%;
-  width: 30vw;
+  width: 100%;
   border-radius: 10px;
   box-shadow: 0 0 0.5px;
 }
@@ -41,7 +41,7 @@
 .genero-details {
   background-color: rgba(0, 0, 0, 0.7);
   color: rgb(255, 255, 255);
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.4s ease-in-out;
   border-radius: 10px;
 }
@@ -57,32 +57,29 @@
 .genero-year {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 2px;
-  font-size: 9px;
+  font-size: 12px;
   border-radius: 3px;
 }
 
-.genero-title, .genero-year-details, .genero-overview {
-  margin: 5px;
-}
 
 .genero-title {
-  font-size: 9px;
+  font-size: 12px;
 }
 
 .genero-year-details {
-  font-size: 7px;
+ font-size: 10px;
+ padding: 0 5px;
 }
 
 .genero-overview {
-  font-size: 8px;
-  width: 95%;
-  letter-spacing: 0.4px;
-  height: 12vh;
+  padding-bottom: 10px;
+  font-size: 12px;
+  height: 10vh;
 }
 
 /* Estilo para el botón de reproducir */
 .play-button-generos {
-  font-size: 8px;
+  font-size: 12px;
   display: inline-block;
   padding: 2px 4px;
   margin: 3px 5px;
@@ -111,7 +108,7 @@
   }
   .genero-card {
     height: 100%;
-    width: 23vw;
+    width: 100%;
   }
 
   .genero-poster {
@@ -132,7 +129,6 @@
 
   .genero-overview {
       font-size: 13px;
-      margin: 15px 10px;
       height: 18vh;
   }
 

@@ -45,7 +45,7 @@ export const Generos = ({ genero }) => {
                   {movie.release_date.split("-")[0]}
                 </p>
                 <p className="genero-overview">
-                  {limitarPalabras(movie.overview, 23)}
+                  {limitarPalabras(movie.overview, 13)}
                 </p>
                 <NavLink to={`/reproducir/${movie.id}`} className="play-button-generos">
                   Reproducir
