@@ -168,6 +168,15 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 10;
   }
+  .movie-card-home {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    aspect-ratio: 9 / 16;
+    min-height: 25vh;
+    border-radius: 5px; /* Unificado */
+  }
 
   .title-home {
     font-size: 25px;
