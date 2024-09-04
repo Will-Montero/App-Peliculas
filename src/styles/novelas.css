@@ -52,7 +52,7 @@
 }
 
 .novela-year-details {
-  font-size: 10px;
+  font-size: 12px;
   margin: 5px 10px;
   color: #ddd;
 }
@@ -62,13 +62,13 @@
   color: #ccc;
   margin: 5px 10px;
   letter-spacing: 0.8px;
-  height: 19vh;
+  height: 18vh;
 }
 
 .play-button-novela {
   font-size: 10px;
   display: inline-block;
-  padding: 2px 4px;
+  padding: 4px 4px;
   margin: 5px 10px;
   color: #fff;
   background-color: #0554a9;
@@ -83,10 +83,9 @@
   background-color: #0056b3;
 }
 
-/* Media queries */
 
 /* Pantallas a partir de 800px */
-@media (min-width: 800px) {
+@media (min-width: 600px) {
   .novela-titulo {
     padding-left: 5vh;
     font-size: 28px;
@@ -98,38 +97,37 @@
   }
 
   .novela-overview {
-    font-size: 11px;
     letter-spacing: 0.6px;
-    height: 22vh;
+    height: 18vh;
   }
 
   .play-button-novela {
     font-size: 10px;
-    padding: 3px 6px;
+    padding: 4px 6px;
     width: 10vw;
   }
 }
 
 /* Pantallas a partir de 1050px */
-@media (min-width: 1050px) {
+@media (min-width: 1200px) {
   .novela-titulo {
     font-size: 35px;
   }
 
   .novela-list {
-    width: 95%;
+    width: 90%;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 5px;
   }
 
   .novela-overview {
     margin: 20px 10px;
-    height: 23vh;
+    height: 15vh;
   }
 
   .play-button-novela {
     font-size: 12px;
     padding: 5px 12px;
-    width: 7vw;
+    width: 8vw;
   }
 }
