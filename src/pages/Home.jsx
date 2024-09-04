@@ -49,7 +49,7 @@ export const Home = () => {
                 {pelicula.release_date.split("-")[0]}
               </span>
             </div>
-            <img  loading="eage"
+            <img  
             width={100} height={300}
               src={`https://image.tmdb.org/t/p/w500${pelicula.poster_path}`}
               alt={pelicula.title}
