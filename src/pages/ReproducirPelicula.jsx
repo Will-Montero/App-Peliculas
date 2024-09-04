@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useContext } from "react";
 import { GenerosContext } from "../context/generos/GenerosContext";
 import { Error } from "../components/Error";
-import  avisoEnsayo from '../assets/error/avisoEnsayo.png'
+import  avisoEnsayo from '../assets/error/avisoEnsayo.avif'
 import '../styles/error.css'
 import '../styles/reproductorPelicula.css'
 import { Loading } from "../components/Loading";

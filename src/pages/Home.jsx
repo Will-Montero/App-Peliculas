@@ -49,7 +49,8 @@ export const Home = () => {
                 {pelicula.release_date.split("-")[0]}
               </span>
             </div>
-            <img loading="lazy"
+            <img  loading="eage"
+            width={200} height={400}
               src={`https://image.tmdb.org/t/p/w500${pelicula.poster_path}`}
               alt={pelicula.title}
               className="movie-poster-home"

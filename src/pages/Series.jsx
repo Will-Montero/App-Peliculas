@@ -31,6 +31,7 @@ export const Series = () => {
                 </span>
               </div>
               <img loading="lazy"
+               width={200} height={400}
                 src={`https://image.tmdb.org/t/p/w500${serie.poster_path}`}
                 alt={serie.name}
                 className="series-poster"

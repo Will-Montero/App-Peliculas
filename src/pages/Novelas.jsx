@@ -21,6 +21,7 @@ export const Novelas = () => {
         { dataNovelas ? dataNovelas.map((novela) => (
           <div key={novela.id} className="novela-card">
             <img loading='lazy'
+            width={200} height={400}
               src={`https://image.tmdb.org/t/p/w500${novela.poster_path}`}
               alt={limitarPalabras(novela.name, 4)}
               className="novela-poster"
