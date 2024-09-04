@@ -1,6 +1,7 @@
 /* Estilos para dispositivos móviles */
 .container-series {
     width: 96%;
+    height: auto;
     padding: 10px;
     background-color: black;
     color: white;
@@ -17,6 +18,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5px;
+    
 }
 
 .series-card {

@@ -20,6 +20,7 @@
 
 .movie-list-home {
   width: 100%;
+  height: auto;
   padding: 5px 0;
   margin: 0 auto;
   display: grid;
