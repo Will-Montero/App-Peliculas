@@ -33,6 +33,7 @@
   position: relative;
   overflow: hidden;
   height: 25vh;
+  aspect-ratio: 9 / 16;
   min-height: 25vh;
   border-radius: 5px; /* Unificado */
 }
