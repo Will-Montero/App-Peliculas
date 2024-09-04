@@ -30,7 +30,7 @@ export const Series = () => {
                   {serie.first_air_date.split("-")[0]}
                 </span>
               </div>
-              <img loading="lazy"
+              <img loading="eager"
                width={200} height={400}
                 src={`https://image.tmdb.org/t/p/w500${serie.poster_path}`}
                 alt={serie.name}
