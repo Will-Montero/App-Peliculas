@@ -63,7 +63,7 @@ export const Home = () => {
                 {pelicula.release_date.split("-")[0]}
               </p>
               <p className="movie-overview-home">
-                {limitarPalabras(pelicula.overview, 15)}
+                {limitarPalabras(pelicula.overview, 12)}
               </p>
               <NavLink to={`/reproducir/${pelicula.id}`} className="play-button-home">
                   Reproducir
