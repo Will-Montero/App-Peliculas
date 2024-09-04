@@ -1,10 +1,11 @@
 /* Estilos para dispositivos móviles */
 .container-series {
-    width: 96%;
+    width: 98%;
     height: auto;
     padding: 10px;
     background-color: black;
     color: white;
+    margin: 0 auto;
 }
 
 .header-series {
@@ -22,17 +23,17 @@
 }
 
 .series-card {
+    margin: 0 auto;
     width: 100%;
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    height: 100%;
-    aspect-ratio: 9 / 16;
+    height: 45vh;
 }
 
 .series-poster {
     width: 100%;
-    height: 100%;
+    height: 45vh;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -59,7 +60,7 @@
 .series-info {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 2px;
-    font-size: 8px;
+    font-size: 12px;
     border-radius: 3px;
     position: absolute;
     margin: 4px 5px;
@@ -76,25 +77,25 @@
 }
 
 .series-title {
-    font-size: 10px;
+    font-size: 12px;
     margin: 5px;
     color: #5acbff;
 }
 
 .series-year-details {
-    font-size: 10px;
+    font-size: 12px;
     margin: 5px;
 }
 
 .series-overview {
-    font-size: 11px;
+    font-size: 12px;
     margin: 10px 5px;
     letter-spacing: 0.6px;
     height: 17vh;
 }
 
 .play-button-series {
-    font-size: 10px;
+    font-size: 12px;
     display: inline-block;
     padding: 4px 5px;
     margin: 3px 5px;
@@ -128,7 +129,7 @@
     }
 
     .series-info {
-        padding: 2px 5px;
+        padding: 10px 5px;
         font-size: 12px;
     }
 
@@ -139,12 +140,12 @@
 
     .series-year-details,
     .series-overview {
-        margin: 10px 5px;
+        padding: 10px 10px;
     }
 
     .play-button-series {
         font-size: 12px;
-        padding: 5px 10px;
+        padding: 5px 15px;
         width: 10vw;
     }
 }
@@ -156,7 +157,7 @@
     }
 
     .series-list {
-        width: 85%;
+        width: 75%;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 10px;
     }

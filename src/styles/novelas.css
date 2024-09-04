@@ -24,7 +24,6 @@
   display: flex;
   height: 100%;
   background-color: #010405;
-  aspect-ratio: 9 / 16;
 }
 
 .novela-card:hover {
