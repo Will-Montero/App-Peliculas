@@ -32,7 +32,7 @@
   width: 100%;
   position: relative;
   overflow: hidden;
-  height: 25vh;
+  height: 100%;
   aspect-ratio: 9 / 16;
   min-height: 25vh;
   border-radius: 5px; /* Unificado */
@@ -73,7 +73,7 @@
 .movie-year-home {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 2px;
-  font-size: 8px;
+  font-size: 12px;
   border-radius: 3px;
   position: absolute;
   margin: 4px 5px;
@@ -81,27 +81,27 @@
 }
 
 .movie-title-home {
-  font-size: 10px;
+  font-size: 12px;
   margin: 3px 5px;
   color: #5acbff;
 }
 
 .movie-year-details-home {
-  font-size: 8px;
+  font-size: 12px;
   margin: 3px 5px;
   color: #ddd;
 }
 
 .movie-overview-home {
-  font-size: 7px;
+  font-size: 12px;
   color: #ccc;
-  margin: 5px 5px;
-  height: 10vh;
-  letter-spacing: 0.7px;
+  margin: 0px 5px;
+  height: 17vh;
+  letter-spacing: 0.5px;
 }
 
 .play-button-home {
-  font-size: 8px;
+  font-size: 11px;
   display: inline-block;
   color: #fff;
   background-color: #007bff;
@@ -111,7 +111,7 @@
   transition: background-color 0.3s ease;
   padding: 2px 4px;
   margin: 0 5px;
-  width: 13vw;
+  width: 18vw;
 }
 
 .play-button-home:hover {
@@ -135,18 +135,15 @@
 
   
 .movie-year-details-home {
-  font-size: 10px;
   margin: 3px 5px;
   color: #ddd;
 }
 
   .movie-overview-home {
-    font-size: 11px;
     height: 18vh;
   }
 
   .play-button-home {
-    font-size: 10px;
     padding: 5px 8px;
     width: 10vw;
   }
@@ -174,7 +171,6 @@
     overflow: hidden;
     height: 100%;
     aspect-ratio: 9 / 16;
-    min-height: 25vh;
     border-radius: 5px; /* Unificado */
   }
 
@@ -187,7 +183,6 @@
   }
 
   .movie-overview-home {
-    font-size: 11px;
     height: 18vh;
   }
 
