@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /private/
 Allow: /
 
-Sitemap: https://michi-sideral-web.app//sitemap.xml
+Sitemap: https:/pelis-free.app//sitemap.xml
