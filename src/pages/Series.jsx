@@ -20,7 +20,7 @@ export const Series = () => {
     <>
       <div className="container-series">
         <header className="header-series">
-          <h1 className="title">Series Online ▶️</h1>
+          <h2 className="title-series">Series Online ▶️</h2>
         </header>
         <div className="series-list">
           {dataSeries ? dataSeries.map((serie) => (

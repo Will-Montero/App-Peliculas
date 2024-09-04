@@ -16,7 +16,7 @@ export const Novelas = () => {
   };
   return (
     <div className="container-novelas">
-      <h1 className='novela-titulo'>Novelas Populares ▶️</h1>
+      <h2 className='novela-titulo'>Novelas Populares ▶️</h2>
       <div className="novela-list">
         { dataNovelas ? dataNovelas.map((novela) => (
           <div key={novela.id} className="novela-card">

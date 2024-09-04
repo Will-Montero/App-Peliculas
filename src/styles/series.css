@@ -1,17 +1,20 @@
 /* Estilos para dispositivos móviles */
 .container-series {
+    padding-top: 60px;
     width: 98%;
     height: auto;
-    padding: 10px;
     background-color: black;
     color: white;
     margin: 0 auto;
 }
 
-.header-series {
+.title-series {
     color: #5acbff;
-    font-size: 13px;
+    font-size: 35px;
+    justify-content: left;
+    padding-left: 0;
 }
+
 
 .series-list {
     width: 100%;
@@ -121,7 +124,6 @@
 
     .header-series {
         font-size: 14px;
-        padding-left: 8vw;
     }
 
     .series-list {
@@ -164,7 +166,6 @@
 
     .series-title {
         font-size: 14px;
-        margin: 10px 5px;
     }
 
     .series-year-details,
