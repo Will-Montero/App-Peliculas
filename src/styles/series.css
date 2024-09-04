@@ -27,6 +27,7 @@
     overflow: hidden;
     border-radius: 10px;
     height: 100%;
+    aspect-ratio: 9 / 16;
 }
 
 .series-poster {
