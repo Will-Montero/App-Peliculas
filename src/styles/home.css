@@ -1,6 +1,7 @@
 /* Estilos generales */
 .home-container {
   width: 98%;
+ min-height: 1000px;
   margin: 0 auto;
   letter-spacing: 0.6px;
   background-color: black;
